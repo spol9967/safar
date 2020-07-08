@@ -1,0 +1,11 @@
+.dashboard {
+  height: 655px;  
+  background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%, 
+  rgba(7, 30, 14, 0.6) 100%), 
+  url("/images/banner-bg.jpg");
+  background-size: auto;
+}
+
+.dashboard .nav a{
+  color: #ffffff;
+}
