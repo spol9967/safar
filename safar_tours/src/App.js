@@ -18,15 +18,17 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Dashboard />
-        <Services />
-        <Video />
-        <Counts />
         <Bookcar />
-        <Subscribe />
-        <Packages />
-        <Testimonial />
+        <Services />
         <Booktrip />
+        <Counts />
+        <Packages />
+        <Video />
+        <Subscribe />
+        <Testimonial />
         <Footer />
+
+
       </div>
     </BrowserRouter>
   );

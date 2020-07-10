@@ -1,11 +1,34 @@
+/*------------------------------------------------------------------------------------*/
+/*---------------------------------------DASHBOARD------------------------------------*/
+/*------------------------------------------------------------------------------------*/
+
 .dashboard {
-  height: 655px;  
+  height: 600px;  
   background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%, 
   rgba(7, 30, 14, 0.6) 100%), 
   url("/images/banner-bg.jpg");
   background-size: auto;
 }
 
-.dashboard .nav a{
-  color: #ffffff;
+.dashboard nav{
+  background-color: transparent;
+  padding: 30px 0;
 }
+
+.dashboard .search-icon{
+  right: 0;
+  padding: 0 10px;
+}
+
+.dashboard .kite-logo{
+  left: -60px;
+  top: 15px;
+  transform: scale(1.2);
+  height: 100px;
+  width: 100px;
+}
+
+.dashboard .title h1{
+  font-size: 80px;
+}
+
