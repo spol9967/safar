@@ -1,27 +1,27 @@
-import React from 'react'
+import React from 'react';
 
 const dashboard = () => {
     return (
         <div className="dashboard">
             <div className="">
-                <nav class="navbar navbar-expand-sm justify-content-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">BOOK CAR</a>
+                <nav className="navbar navbar-expand-sm justify-content-center">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="nav-link text-light" href="#">BOOK CAR</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">HOLIDAYS</a>
+                        <li className="nav-item">
+                            <a className="nav-link text-light" href="#">HOLIDAYS</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">SERVICES</a>
+                        <li className="nav-item">
+                            <a className="nav-link text-light" href="#">SERVICES</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="#">INFO</a>
+                        <li className="nav-item">
+                            <a className="nav-link text-light" href="#">INFO</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav search-icon position-absolute">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">S</a>
+                    <ul className="navbar-nav search-icon position-absolute">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">S</a>
                         </li>
                     </ul>
                 </nav>
