@@ -27,8 +27,6 @@ function App() {
         <Subscribe />
         <Testimonial />
         <Footer />
-
-
       </div>
     </BrowserRouter>
   );
