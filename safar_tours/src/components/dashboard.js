@@ -5,7 +5,7 @@ const dashboard = () => {
         <div className="dashboard">
             <div className="">
                 <nav className="navbar navbar-expand-sm justify-content-center">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav dashbar-nav">
                         <li className="nav-item">
                             <a className="nav-link text-light" href="#">BOOK CAR</a>
                         </li>
@@ -21,16 +21,16 @@ const dashboard = () => {
                     </ul>
                     <ul className="navbar-nav search-icon position-absolute">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">S</a>
+                            <a className="nav-link text-light" href="#"><img src="/images/ico_search.svg" alt=""/></a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div className="title text-light text-center position-relative">
             <img src="/images/kite.png" alt="kite bird image" className="kite-logo position-relative"/>
-                <h1>SAFAR</h1>
-                <h4>TOURS AND TRAVELS</h4>
-                <h7>BLA BLA BLA BLA</h7>
+                <h1>safar</h1>
+                <h4>tours and travels</h4>
+                <h6>Car-Holiday-Tour-Booking-Trip-Hotels-Travel</h6>
             </div>
         </div>
     )
