@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SectionHeading from './SectionHeading';
 const Bookcar = () => {
     const carData = [
         {
@@ -66,7 +66,7 @@ const Bookcar = () => {
             carName : "Tata Zest",
             carYearModel: 2020,
             seatIcon : "/images/overturned-vehicle.png",
-            seats : 7,
+            seats : 5,
             facilityIcon : "/images/lines.png",
             kilpMeterIcon : "/images/lines.png",
             ratePerKiloMeter : "16₹/km",
@@ -82,17 +82,11 @@ const Bookcar = () => {
     return (
         <section className="book-Your-Car">
             <div className="container">
-                <div className="section-heading-wrapper text-center mb-5">
-                    <h4 className="sub-heading">OUR SMILES</h4>
-                    <h2 className="section-heading">Book Your Car</h2>
-                    <div className="section-heading-below-image">
-                        <img src={process.env.PUBLIC_URL + '/images/Shape1.png'} alt="section Heading below image"/>
-                    </div>
-                </div>
+                <SectionHeading heading="Book Your Car" subheading="OUR SMILES" sectionColor="#1A1A1B"/>
                 <div className="row">
                     {
                         carData.map(data => (
-                            <div className="col-md-6 col-lg-3" key={data.id}>
+                            <div className="col-md-6 col-lg-3 mb-4 mb-lg-0" key={data.id}>
                                 <div className="car-grid-wrapper">
                                     <div className="car-date-wrapper">
                                         <h6 className="text-center">
@@ -100,7 +94,7 @@ const Bookcar = () => {
                                         </h6>
                                     </div>
                                     <div className="car-image-wrapper">
-                                        <img src={data.carImage} alt={data.carName} className="img-fluid" />
+                                        <img src={data.carImage} alt={data.carName} className="img-fluid w-100" />
                                     </div>
                                     <div className="car-info-wrapper">
                                         <div className="car-model-year">

@@ -202,3 +202,76 @@ section .car-grid-wrapper .car-info-wrapper .book-now-button a .book-arrow{
   right: 10px;
 }
 /* Book car end */
+/* Footer start */
+footer .main-footer-wrapper{
+  background-color: #fff;
+  padding: 30px 0; 
+}
+footer .main-footer-wrapper .business-info{
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+footer .main-footer-wrapper .social-links li{
+  margin-right: 15px;
+}
+footer .main-footer-wrapper .footer-menu-links{
+  list-style-type: "\279D";
+  padding-left: 20px;
+}
+
+footer .main-footer-wrapper .footer-menu-links li a{
+  font-family: "Raleway";
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
+  text-decoration: none;
+  color: #402E2C;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-menu-links li a:hover{
+  padding-left: 10px;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-grid-heading{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+  color: #402E2C;
+}
+footer .main-footer-wrapper a.contact-links{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight:  600;
+  line-height: 28px;
+  color: #402E2C;
+  text-decoration: none;
+}
+footer .sub-footer{
+  background-color: #402E2C;
+  padding: 15px 0;
+}
+footer .sub-footer p,
+footer .sub-footer ul{
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+footer .sub-footer p{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+
+}
+footer .sub-footer ul li a{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+  margin: 0 20px;
+  text-decoration: none;
+}
+/* Footer end */
