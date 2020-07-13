@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="main-footer-wrapper">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-4 mb-md-0">
                             <div className="footer-logo-wrapper text-center text-md-left">
                                 <img src={process.env.PUBLIC_URL + '/images/ftrLogo.png'} className="img-fluid" alt="" srcset=""/>
                             </div>
@@ -20,7 +20,7 @@ const Footer = () => {
                                 <li><a href="#"><img src={process.env.PUBLIC_URL + '/images/Pinterest.svg'} /></a></li>
                             </ul>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-4 mb-md-0">
                             <h4 className="footer-grid-heading">QUICK LINKS</h4>
                             <ul className="footer-menu-links">
                                 <li>
@@ -40,7 +40,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 mb-4 mb-md-0">
                             <h4 className="footer-grid-heading">CONTACT US</h4>
                             <p className="business-info">
                                 Feel free to get in touch with us via phone or send
