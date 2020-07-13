@@ -1,24 +1,20 @@
 import React from 'react';
+import SectionHeading from './SectionHeading';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Packages = () => {
     return (
-        <section class="packages-section">
+        <section className="packages-section">
             <div className="container">
+                <SectionHeading heading="Popular Tour Package" subheading="WE OFFER" sectionColor="#1A1A1B"/>
                 <div className="row">
-                    <div className="packages-header text-center w-100">
-                        <h4>WE OFFER</h4>
-                        <h4>Popular Tour Package</h4>
-                    </div>
-
                     <OwlCarousel
                         className="owl-theme"
                         loop
                         margin={10}
                         nav>
-
                         <div className="item">
                             <div className="pkg-card">
                                 <div className="pkg-img">

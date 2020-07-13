@@ -84,6 +84,7 @@
   margin: 0;
 }
 
+<<<<<<< HEAD
 /* ---------- services----------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -215,3 +216,196 @@
   background:rgba(169, 173, 34, 0.8);
 }
 /* ----------end of overlay------------- */
+=======
+/* Book car start */
+section.book-Your-Car{
+  padding: 80px 0;
+}
+section .section-heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #1A1A1B;
+  margin-bottom: 0px;
+}
+section .sub-heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #8D8D8D;
+}
+section .car-grid-wrapper:hover{
+  box-shadow: 0px 0px 30px rgba(107, 237, 107, 0.18);
+  transition: ease 0.3s box-shadow;
+}
+section .car-grid-wrapper{
+  box-shadow: 6px 12px 24px rgba(68, 68, 68, 0.18);
+  padding: 8px;
+  transition: ease 0.3s box-shadow;
+}
+section .car-grid-wrapper .car-date-wrapper{
+  background: linear-gradient(to right,#B94646,#E73054);
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+section .car-grid-wrapper .car-date-wrapper h6{
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #fff;
+}
+section .car-grid-wrapper .car-image-wrapper{
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year{
+  border-bottom: 1px solid #EBEBEB;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year .car-name{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year .car-year{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-facility-icon{
+  width: 30px;
+  display: inline-block;
+}
+section .car-grid-wrapper .car-info-wrapper .seats{
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-seater{
+  border-bottom: 1px solid #EBEBEB;
+  padding: 5px 0;
+}
+section .car-grid-wrapper .car-info-wrapper .car-facilities{
+  border-bottom: 1px solid #EBEBEB;
+  padding: 5px 0;
+}
+
+section .car-grid-wrapper .car-info-wrapper .car-facilities .facility-lists li{
+  border-left: 1px solid #EBEBEB;
+  margin-right: 3px;
+  padding: 0 7px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-rate{
+  padding: 5px 0;
+}
+section .car-grid-wrapper .car-info-wrapper .car-rate .rate p{
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a{
+  background-color: #74B946;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  padding: 5px 0;
+  border-radius: 3px;
+  border: 1px solid #74B946;
+  transition: 0.3s all ease;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a:hover{
+  background-color: #fff;
+  color: #74b946;
+  transition: 0.3s all ease;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a .book-arrow{
+  position: absolute;
+  right: 10px;
+}
+/* Book car end */
+/* Footer start */
+footer .main-footer-wrapper{
+  background-color: #fff;
+  padding: 30px 0; 
+}
+footer .main-footer-wrapper .business-info{
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+footer .main-footer-wrapper .social-links li{
+  margin-right: 15px;
+}
+footer .main-footer-wrapper .footer-menu-links{
+  list-style-type: "\279D";
+  padding-left: 20px;
+}
+
+footer .main-footer-wrapper .footer-menu-links li a{
+  font-family: "Raleway";
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
+  text-decoration: none;
+  color: #402E2C;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-menu-links li a:hover{
+  padding-left: 10px;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-grid-heading{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+  color: #402E2C;
+}
+footer .main-footer-wrapper a.contact-links{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight:  600;
+  line-height: 28px;
+  color: #402E2C;
+  text-decoration: none;
+}
+footer .sub-footer{
+  background-color: #402E2C;
+  padding: 15px 0;
+}
+footer .sub-footer p,
+footer .sub-footer ul{
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+footer .sub-footer p{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+
+}
+footer .sub-footer ul li a{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+  margin: 0 20px;
+  text-decoration: none;
+}
+/* Footer end */
+>>>>>>> 90d1a328e649f9dc839b00c2edcb8c256e0d66ac
