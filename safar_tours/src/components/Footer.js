@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-4 mb-4 mb-md-0">
                             <div className="footer-logo-wrapper text-center text-md-left">
-                                <img src={process.env.PUBLIC_URL + '/images/ftrLogo.png'} className="img-fluid" alt="" srcset=""/>
+                                <img src={process.env.PUBLIC_URL + '/images/ftrLogo.png'} className="img-fluid" alt="LOGO"/>
                             </div>
                             <p className="business-info">
                                 Fusce dapibus, tellus ac cursus commodo,
@@ -16,27 +17,27 @@ const Footer = () => {
                                 commodo, tortor mauris. 
                             </p>
                             <ul className="list-inline d-flex social-links">
-                                <li><a href="#"><img src={process.env.PUBLIC_URL + '/images/twitter.svg'} /></a></li>
-                                <li><a href="#"><img src={process.env.PUBLIC_URL + '/images/Pinterest.svg'} /></a></li>
+                                <li><Link to=""><img src={process.env.PUBLIC_URL + '/images/twitter.svg'} alt="twitter Icon"/></Link></li>
+                                <li><Link to=""><img src={process.env.PUBLIC_URL + '/images/Pinterest.svg'} alt="pinterest Icon" /></Link></li>
                             </ul>
                         </div>
                         <div className="col-md-4 mb-4 mb-md-0">
                             <h4 className="footer-grid-heading">QUICK LINKS</h4>
                             <ul className="footer-menu-links">
                                 <li>
-                                    <a href="#" className="footer-quick-linkd">HOME</a>
+                                    <Link to="/" className="footer-quick-linkd">HOME</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="footer-quick-linkd">ABOUT US</a>
+                                    <Link to="/" className="footer-quick-linkd">ABOUT US</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="footer-quick-linkd">CITY GUIDE</a>
+                                    <Link to="/" className="footer-quick-linkd">CITY GUIDE</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="footer-quick-linkd">BLOG</a>
+                                    <Link to="/" className="footer-quick-linkd">BLOG</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="footer-quick-linkd">FAQ's</a>
+                                    <Link to="/" className="footer-quick-linkd">FAQ's</Link>
                                 </li>
                             </ul>
                         </div>
@@ -67,10 +68,10 @@ const Footer = () => {
                         <div className="col-md-6 text-md-right text-center" >
                             <ul className="list-inline d-flex justify-content-center justify-content-md-end">
                                 <li>
-                                    <a href="#">Privacy Policy</a>
+                                    <Link to="#">Privacy Policy</Link>
                                 </li>
                                 <li>
-                                    <a href="#">Terms & Conditions</a>
+                                    <Link to="#">Terms & Conditions</Link>
                                 </li>
                             </ul>
                         </div>

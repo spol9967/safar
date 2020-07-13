@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Packages = () => {
     return (
-        <section class="packages-section">
+        <section className="packages-section">
             <div className="container">
                 <SectionHeading heading="Popular Tour Package" subheading="WE OFFER" sectionColor="#1A1A1B"/>
                 <div className="row">

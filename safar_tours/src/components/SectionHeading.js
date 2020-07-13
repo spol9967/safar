@@ -6,7 +6,7 @@ function SectionHeading(props) {
             <h4 className="sub-heading" style={{color:props.sectionColor}}>{props.subheading}</h4>
             <h2 className="section-heading" style={{color:props.sectionColor}}>{props.heading}</h2>
             <div className="section-heading-below-image">
-                <img src={process.env.PUBLIC_URL + '/images/Shape1.png'} alt="section Heading below image"/>
+                <img src={process.env.PUBLIC_URL + '/images/Shape1.png'} alt="section below line"/>
             </div>
         </div>
     )
