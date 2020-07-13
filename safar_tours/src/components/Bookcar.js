@@ -80,11 +80,6 @@ const Bookcar = () => {
         }
     ]
     return (
-<<<<<<< HEAD
-        <div>
-            
-        </div>
-=======
         <section className="book-Your-Car">
             <div className="container">
                 <SectionHeading heading="Book Your Car" subheading="OUR SMILES" sectionColor="#1A1A1B"/>
@@ -146,7 +141,6 @@ const Bookcar = () => {
                 </div>
             </div>
         </section>
->>>>>>> 90d1a328e649f9dc839b00c2edcb8c256e0d66ac
     )
 }
 
