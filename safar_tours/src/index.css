@@ -125,6 +125,7 @@
   border: 2px solid #ffffff80;
   margin: 50px 20px 30px 0;
   width: 400px;
+  outline: none;
 }
 
 .subscribe input::placeholder{
@@ -147,9 +148,23 @@
   background-color: #fff;
   border: 2px solid #ffffff;
   margin: 50px 20px 100px 0;
+  outline: none;
 }
 
 /* -------------------------subscribe end------------------------------- */
+/* -------------------------Video start------------------------------- */
+
+.video-section{
+  height: auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%,
+      rgba(0, 0, 0, 0.6) 100%),
+    url("/images/video_bg.jpg");
+    padding: 50px 0 30px 0;
+    background-position-y: center;
+}
+
+
+/* -------------------------Video end------------------------------- */
 
 /* Packages css */
 .pkg-img {
