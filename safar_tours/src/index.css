@@ -21,6 +21,9 @@
 .playfair{
   font-family: 'Playfair Display', serif;
 }
+.raleway{
+  font-family: 'Raleway', sans-serif;
+}
 .popin{
   font-family: 'Poppins', sans-serif;
 }
@@ -99,6 +102,54 @@
   color: rgba(255, 255, 255, 0.52);
 }
 
+
+/* -------------------------subscribe start------------------------------- */
+.subscribe{
+  background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%,
+      rgba(61, 155, 89, 0.6) 100%),
+    url("/images/book-trip-bg.jpg");
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.subscribe input{
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #ffffff80;
+  margin: 50px 20px 30px 0;
+  width: 500px;
+}
+
+.subscribe input::placeholder{
+  color: #ffffff80;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.subscribe input:focus{
+  border-radius: 25px;
+}
+
+.subscribe button{
+  color: #445a21;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 2px solid #ffffff;
+  margin: 50px 20px 100px 0;
+}
+
+/* -------------------------subscribe end------------------------------- */
 
 /* Packages css */
 .pkg-img {
