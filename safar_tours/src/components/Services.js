@@ -11,7 +11,7 @@ const Services = () => {
                             //<p className="discover-text">DISCOVER</p>
                             //<h4 className="services-heading">Our Hot Services</h4>
                         }
-                        <SectionHeading heading="Our Hot Services" subheading="DISCOVER" sectionColor="#1A1A1B" align="text-left"/>
+                        <SectionHeading heading="Our Hot Services" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="DISCOVER" sectionColor="#1A1A1B" align="text-left"/>
                         <p className="services-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                     </div>
                     <div className="col-sm-9">

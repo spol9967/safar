@@ -66,7 +66,7 @@ const Packages = () => {
     return (
         <section className="packages-section" style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/images/Background.png'})`}}>
             <div className="container">
-                <SectionHeading heading="Popular Tour Package" subheading="WE OFFER" sectionColor="#1A1A1B" align="text-center"/>
+                <SectionHeading heading="Popular Tour Package" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="WE OFFER" sectionColor="#1A1A1B" align="text-center"/>
                 <div className="row">
                     <div className="col-md-10 mx-auto">
                         <OwlCarousel className="owl-theme" {...options}>
