@@ -9,8 +9,7 @@ const Testimonial = () => {
         <section className="book-Your-Car">
             <div className="container">
                 <div>
-                    <SectionHeading heading="Happy Travelers" subheading="OUR SMILES" sectionColor="#1A1A1B" />
-                    
+                <SectionHeading heading="Happy Travelers" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
                     <div className="row">
                     <OwlCarousel
                         className="owl-theme"
@@ -30,6 +29,7 @@ const Testimonial = () => {
                     </OwlCarousel>
                 </div>
 
+                    
                 </div>
             </div>
             

@@ -82,7 +82,7 @@ const Bookcar = () => {
     return (
         <section className="book-Your-Car">
             <div className="container">
-                <SectionHeading heading="Book Your Car" subheading="OUR SMILES" sectionColor="#1A1A1B"/>
+                <SectionHeading heading="Book Your Car" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
                 <div className="row">
                     {
                         carData.map(data => (
