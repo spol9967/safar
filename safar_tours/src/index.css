@@ -167,17 +167,52 @@
 /* -------------------------Video end------------------------------- */
 
 /* Packages css */
-.pkg-img {
+.packages-section{
+  /* background-image: url(../public/images/Background.png); */
+  padding: 60px 0;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.packages-section .pkg-img {
   position: relative;
 }
 
-.pkg-card {
-  width: 300px;
+.packages-section .pkg-card {
+  /* width: 300px; */
   margin: auto;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 12px #65656560;
 }
-
-.pkg-img .img-label {
+.packages-section .pkg-card:hover{
+  box-shadow: 0 0 12px rgba(74, 197, 68, 0.3764705882352941);
+}
+.packages-section .pkg-content{
+  padding: 10px 0;
+}
+.packages-section .pkg-price{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 14px;
+}
+.packages-section .owl-item{
+  margin-bottom: 20px;
+}
+.pkg-name{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 18px;
+}
+.pkg-duration{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 14px;
+}
+.packages-section .pkg-img .img-label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -186,8 +221,41 @@
   background-color: black;
 }
 
-.pkg-content p{
+.packages-section .pkg-content p{
   margin: 0;
+}
+.packages-section .owl-theme .owl-nav{
+  position: absolute;
+  width: 100%;
+  transform: translateY(-50%);
+  top: 45%;
+  margin-top: 0;
+}
+.packages-section .owl-carousel .owl-nav button.owl-prev{
+  left: -50px;
+}
+.packages-section .owl-carousel .owl-nav button.owl-next{
+  right: -50px;
+}
+.packages-section .owl-carousel .owl-nav button span{
+  font-size: 30px;
+  line-height: 20px;
+}
+.packages-section .owl-carousel .owl-nav button:hover span{
+  color: #000 !important;
+}
+.packages-section .owl-carousel .owl-nav button{
+  box-shadow: 0 0 12px rgba(128, 128, 128, 0.27);
+  position: absolute;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+}
+.packages-section .owl-carousel .owl-nav button:hover{
+  box-shadow: 0 0 12px rgba(74, 197, 68, 0.3764705882352941);
+  background-color: #fff !important;
 }
 
 /* ---------- services----------- */

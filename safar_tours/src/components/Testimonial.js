@@ -6,7 +6,7 @@ const Testimonial = () => {
         <section className="book-Your-Car">
             <div className="container">
                 <div>
-                    <SectionHeading heading="Happy Travelers" subheading="OUR SMILES" sectionColor="#1A1A1B" />
+                    <SectionHeading heading="Happy Travelers" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
                 </div>
             </div>
         </section>
