@@ -3,21 +3,56 @@
 /*------------------------------------------------------------------------------------*/
 
 .dashboard {
-  height: 600px;
   background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%,
       rgba(7, 30, 14, 0.6) 100%),
     url("/images/banner-bg.jpg");
   background-size: auto;
+  padding: 0 0 20px 0;
 }
 
 .dashboard nav {
   background-color: transparent;
   padding: 30px 0;
+  font-family: 'Playfair Display', serif;
+}
+.text-light-2{
+  color: rgba(255, 255, 255, 0.548);
+}
+.playfair{
+  font-family: 'Playfair Display', serif;
+}
+.raleway{
+  font-family: 'Raleway', sans-serif;
+}
+.popin{
+  font-family: 'Poppins', sans-serif;
+}
+.dashboard .dashbar-nav li{
+  padding: 0 10px;;
 }
 
 .dashboard .search-icon {
   right: 0;
   padding: 0 10px;
+}
+
+.dashboard .search-icon li{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.671) solid 1px;
+  background-color: rgba(255, 255, 255, 0.109);
+  line-height: 1.3;
+  text-align: center;
+}
+
+.dashboard .search-icon li:hover{
+  background-color: rgba(255, 255, 255, 0.041);
+}
+
+.dashboard .search-icon img{
+  width: 15px;
+  height: 15px;
 }
 
 .dashboard .kite-logo {
@@ -28,22 +63,161 @@
   width: 100px;
 }
 
-.dashboard .title h1 {
-  font-size: 80px;
+.dashboard .title{
+  font-family: 'Piedra', cursive;
 }
 
+.dashboard .title h1 {
+  font-size: 100px;
+  line-height: 1;
+}
+.dashboard .title h4 {
+  font-size: 60px;
+  line-height: 1;
+}
+.dashboard .title h6 {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.479);
+}
+.bottom{height: 150px;}
+.bottom .key-location .bg{
+  width: 100px;
+  height: 130px;
+  margin: 5px 30px 0 0;
+  box-shadow: 5px 10px 5px #0000007c;
+  background-image: linear-gradient(180deg, rgba(4, 34, 7, 0.486) 0%,
+  rgba(7, 30, 14, 0.233) 100%),
+  url("/images/banner-bg.jpg");
+}
+
+.bottom .key-location>div:nth-child(2)>div:nth-child(1){
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.bottom .key-location>div:nth-child(2)>div:nth-child(2){
+  font-size: 30px;
+  line-height: 1;
+}
+.bottom .key-location>div:nth-child(2)>div:nth-child(3){
+  color: rgba(255, 255, 255, 0.52);
+}
+
+
+/* -------------------------subscribe start------------------------------- */
+.subscribe{
+  background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%,
+      rgba(61, 155, 89, 0.6) 100%),
+    url("/images/book-trip-bg.jpg");
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.subscribe input{
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #ffffff80;
+  margin: 50px 20px 30px 0;
+  width: 400px;
+  outline: none;
+}
+@media only screen and (max-width:600px){
+  .subscribe input{
+    width: 100%;
+    margin-right:0;
+  }
+}
+.subscribe input::placeholder{
+  color: #ffffff80;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.subscribe input:focus{
+  border-radius: 25px;
+}
+
+.subscribe button{
+  color: #445a21;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 2px solid #ffffff;
+  margin: 50px 20px 100px 0;
+  outline: none;
+}
+
+/* -------------------------subscribe end------------------------------- */
+/* -------------------------Video start------------------------------- */
+
+.video-section{
+  height: auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%,
+      rgba(0, 0, 0, 0.6) 100%),
+    url("/images/video_bg.jpg");
+    padding: 50px 0 30px 0;
+    background-position-y: center;
+}
+
+
+/* -------------------------Video end------------------------------- */
+
 /* Packages css */
-.pkg-img {
+.packages-section{
+  /* background-image: url(../public/images/Background.png); */
+  padding: 60px 0;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.packages-section .pkg-img {
   position: relative;
 }
 
-.pkg-card {
-  width: 300px;
-  margin: 2rem auto;
+.packages-section .pkg-card {
+  /* width: 300px; */
+  margin: auto;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 12px #65656560;
 }
-
-.pkg-img .img-label {
+.packages-section .pkg-card:hover{
+  box-shadow: 0 0 12px rgba(74, 197, 68, 0.3764705882352941);
+}
+.packages-section .pkg-content{
+  padding: 10px 0;
+}
+.packages-section .pkg-price{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 14px;
+}
+.packages-section .owl-item{
+  margin-bottom: 20px;
+}
+.pkg-name{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 18px;
+}
+.pkg-duration{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 37px;
+  font-size: 14px;
+}
+.packages-section .pkg-img .img-label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -52,10 +226,420 @@
   background-color: black;
 }
 
-.pkg-content{
-  padding: 1rem 0;
+.packages-section .pkg-content p{
+  margin: 0;
+}
+.packages-section .owl-theme .owl-nav{
+  position: absolute;
+  width: 100%;
+  transform: translateY(-50%);
+  top: 45%;
+  margin-top: 0;
+}
+.packages-section .owl-carousel .owl-nav button.owl-prev{
+  left: -50px;
+}
+.packages-section .owl-carousel .owl-nav button.owl-next{
+  right: -50px;
+}
+@media only screen and (max-width:600px){
+  .packages-section .owl-carousel .owl-nav button.owl-prev{
+    left: -25px;
+  }
+  .packages-section .owl-carousel .owl-nav button.owl-next{
+    right: -25px;
+  }
+}
+.packages-section .owl-carousel .owl-nav button span{
+  font-size: 30px;
+  line-height: 20px;
+}
+.packages-section .owl-carousel .owl-nav button:hover span{
+  color: #000 !important;
+}
+.packages-section .owl-carousel .owl-nav button{
+  box-shadow: 0 0 12px rgba(128, 128, 128, 0.27);
+  position: absolute;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+}
+.packages-section .owl-carousel .owl-nav button:hover{
+  box-shadow: 0 0 12px rgba(74, 197, 68, 0.3764705882352941);
+  background-color: #fff !important;
 }
 
-.pkg-content p{
-  margin: 0;
+/* ---------- services----------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.services-container{
+  margin: 50px 0 20px 0;
+}
+.discover-text{
+  font-family: 'Poppins', sans-serif;
+  color: #a4a4a4;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.services-para{
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #8d8d8d;
+}
+.services-box img{
+  width: 100%;
+  transition: .5s;
+}
+.service-sub-heading{
+  font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px 0 5px 0;
+    color: #1a1a1b;
+}
+.services-heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #1a1a1b;
+  font-size: 26px;
+}
+.second-row{
+  margin-bottom:30px;
+}
+.trip-content{
+  text-align: center;
+}
+.trip-button{
+  color: #445a21;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: 2px solid #ffffff;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+.book-trip-bg{
+  background: linear-gradient(180deg, rgba(3, 32, 6, 0.76) 0%,
+      rgba(7, 30, 14, 0.6) 100%),
+    url("/images/book-trip-bg.jpg");
+  height: auto;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.trip-heading{
+  color: #ffffff;
+  font-size: 38px;
+  font-family: 'Raleway', sans-serif;
+  padding: 150px 0 30px 0;
+}
+
+/* ----overlay effect ----*/
+.services-box{
+  position: relative;
+  background-size: cover;
+  border: 2px solid #fff;
+  overflow: hidden;
+} 
+.service-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-container:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: translateX(-10%) scale(1) skew(-45deg);
+  transition: .5s; 
+}
+.content {
+  /* position: absolute; */
+  /* top: 72%; */
+  /* transform: translateY(-50%); */
+  /* padding: 30px 50px; */
+  text-align: center;
+  /* transform: translateX(50%); */
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 70px; */
+  display: inline-block;
+  width: 100%;
+}
+.content .service-btn {
+  border-radius: 25px;
+  padding: 5px 20px;
+  border: 2px solid #a9ad22;
+  color: #a9ad22;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transform: translateY(-100%) scale(0);
+  transition: .5s;
+}
+.services-box:hover .content .service-btn {
+  transform: translateY(0) scale(1);
+}
+.services-box:hover img{
+  transform: scale(2) translateX(10px);
+}
+.services-box:hover .service-container:before{
+  opacity: 1;
+  transform: translateX(0%) scale(1) skew(-45deg);
+  background:rgba(169, 173, 34, 0.8);
+}
+/* ----------end of overlay------------- */
+/* Book car start */
+section.book-Your-Car{
+  padding: 80px 0;
+}
+section .section-heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: #1A1A1B;
+  margin-bottom: 0px;
+}
+section .sub-heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #8D8D8D;
+}
+section .car-grid-wrapper:hover{
+  box-shadow: 0px 0px 30px rgba(107, 237, 107, 0.18);
+  transition: ease 0.3s box-shadow;
+}
+section .car-grid-wrapper{
+  box-shadow: 6px 12px 24px rgba(68, 68, 68, 0.18);
+  padding: 8px;
+  transition: ease 0.3s box-shadow;
+}
+section .car-grid-wrapper .car-date-wrapper{
+  background: linear-gradient(to right,#B94646,#E73054);
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+section .car-grid-wrapper .car-date-wrapper h6{
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #fff;
+}
+section .car-grid-wrapper .car-image-wrapper{
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year{
+  border-bottom: 1px solid #EBEBEB;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year .car-name{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-model-year .car-year{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-facility-icon{
+  width: 30px;
+  display: inline-block;
+}
+section .car-grid-wrapper .car-info-wrapper .seats{
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-seater{
+  border-bottom: 1px solid #EBEBEB;
+  padding: 5px 0;
+}
+section .car-grid-wrapper .car-info-wrapper .car-facilities{
+  border-bottom: 1px solid #EBEBEB;
+  padding: 5px 0;
+}
+
+section .car-grid-wrapper .car-info-wrapper .car-facilities .facility-lists li{
+  border-left: 1px solid #EBEBEB;
+  margin-right: 3px;
+  padding: 0 7px;
+  font-family: 'Poppins',sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .car-rate{
+  padding: 5px 0;
+}
+section .car-grid-wrapper .car-info-wrapper .car-rate .rate p{
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #45454D;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a{
+  background-color: #74B946;
+  text-decoration: none;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  padding: 5px 0;
+  border-radius: 3px;
+  border: 1px solid #74B946;
+  transition: 0.3s all ease;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a:hover{
+  background-color: #fff;
+  color: #74b946;
+  transition: 0.3s all ease;
+}
+section .car-grid-wrapper .car-info-wrapper .book-now-button a .book-arrow{
+  position: absolute;
+  right: 10px;
+}
+/* Book car end */
+/* Footer start */
+footer .main-footer-wrapper{
+  background-color: #fff;
+  padding: 30px 0; 
+}
+footer .main-footer-wrapper .business-info{
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+}
+footer .main-footer-wrapper .social-links li{
+  margin-right: 15px;
+}
+footer .main-footer-wrapper .footer-menu-links{
+  list-style-type: "\279D";
+  padding-left: 20px;
+}
+
+footer .main-footer-wrapper .footer-menu-links li a{
+  font-family: "Raleway";
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 36px;
+  text-decoration: none;
+  color: #402E2C;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-menu-links li a:hover{
+  padding-left: 10px;
+  transition: 0.3s ease padding ;
+}
+footer .main-footer-wrapper .footer-grid-heading{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+  color: #402E2C;
+}
+footer .main-footer-wrapper a.contact-links{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight:  600;
+  line-height: 28px;
+  color: #402E2C;
+  text-decoration: none;
+}
+footer .sub-footer{
+  background-color: #402E2C;
+  padding: 15px 0;
+}
+footer .sub-footer p,
+footer .sub-footer ul{
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+footer .sub-footer p{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+
+}
+footer .sub-footer ul li a{
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  color: #CCCCCC;
+  margin: 0 20px;
+  text-decoration: none;
+}
+/* Footer end */
+
+/* ------------testimonals---------- */
+.testimonial{
+  padding: 80px 0;
+}
+.testimonial .t-1{
+  border: 3px solid #7cb946;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.testimonial .test-card {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 0 20px #f4f4f4f3;
+  border: 1px solid #f4f4f4;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+.testimonial .owl-carousel .owl-item img{
+  width: auto !important;
+}
+.testimonial .test-name{
+  font-family: 'Poppins',sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.testimonial .test-para{
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Poppins',sans-serif;
+  margin-top: 10px;
+  color: #858585;
+  padding: 0 5px;
+}
+.testimonial .quotes{
+  margin-left: auto;
+  margin-right: auto;
 }
