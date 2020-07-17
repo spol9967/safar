@@ -48,9 +48,9 @@ const dashboard = () => {
                             <div className="text-light raleway text-right pt-3">Pune</div>
                             <div className="sub-title raleway text-light-2 text-right">Sexten Dolomites,<br></br> Elevation2,999 m (9,839 ft)</div>
                             <div className="social-icon text-right raleway">
-                                <div className="text-light d-inline rounded-circle border border-light"><i class="fab fa-pinterest"></i></div>
-                                <div className="text-light d-inline rounded-circle border border-light"><i class="fab fa-twitter"></i></div>
-                                <div className="text-light d-inline rounded-circle border border-light"><i class="fab fa-facebook-f"></i></div>
+                                <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-pinterest"></i></div>
+                                <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-twitter"></i></div>
+                                <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-facebook-f"></i></div>
                             </div>
                         </div>
                         <div className="map"></div>

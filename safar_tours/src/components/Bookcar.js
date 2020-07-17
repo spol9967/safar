@@ -1,31 +1,26 @@
 import React, { Component }  from 'react';
 import SectionHeading from './SectionHeading';
 import {db, auth} from '../config/fbConfig'
-
-
-
 class Bookcar extends Component{
-
-    state= {cars: null}
+    state = {cars: null}
 
     componentDidMount(){
-        console.log("hii");
+        //console.log("hii");
         db.collection('cars')
-          .get()
-          .then( snapshot =>{
-              const cars = [];
-              snapshot.forEach(doc=>{
-                      const data = doc.data();
-                      cars.push(data)
-                  })
-            console.log(cars);
-            this.setState({cars: cars})
-          })
-          .catch(error => console.log(error))
+            .get()
+            .then( snapshot =>{
+                    const cars = [];
+                    snapshot.forEach(doc =>{
+                        const data = doc.data();
+                        cars.push(data)
+                    })
+                //console.log(cars);
+                this.setState({cars: cars})
+            })
+            .catch(error => console.log(error))
     }
 
     render(){ 
-
         return (
             <section className="book-Your-Car">
                 <div className="container">
@@ -82,7 +77,6 @@ class Bookcar extends Component{
                                         </div>
                                     </div>
                                 </div>
-    
                             ))
                         }
                     </div>
@@ -91,8 +85,4 @@ class Bookcar extends Component{
         )
     }
 }
-    
-    
-  
-
 export default Bookcar
