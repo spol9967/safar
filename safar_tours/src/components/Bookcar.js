@@ -86,7 +86,7 @@ const Bookcar = () => {
                 <div className="row">
                     {
                         carData.map(data => (
-                            <div className="col-md-6 col-lg-3 mb-4 mb-lg-0" key={data.id}>
+                            <div className="col-10 col-sm-8 mx-auto col-md-6 col-lg-3 mb-4 mb-lg-0" key={data.id}>
                                 <div className="car-grid-wrapper">
                                     <div className="car-date-wrapper">
                                         <h6 className="text-center">

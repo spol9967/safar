@@ -5,17 +5,38 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Testimonial = () => {
+    const options = {
+        items: 3,
+        nav: true,
+        loop:true,
+        rewind: true,
+        autoplay: true,
+        margin:20,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    };
     return (
-        <section className="book-Your-Car">
+        <section className="testimonial">
             <div className="container">
                 <div>
                 <SectionHeading heading="Happy Travelers" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
                     <div className="row">
                     <OwlCarousel
                         className="owl-theme"
-                        loop
-                        margin={10}
-                        nav>
+                        {...options}>
                         <div className="item">
                             <div className="test-card">
                                     <img src={process.env.PUBLIC_URL + "/images/test-1.jpg"} alt="test 1" className="t-1 img-responsive" />

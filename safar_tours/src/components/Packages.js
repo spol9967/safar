@@ -68,11 +68,12 @@ const Packages = () => {
             <div className="container">
                 <SectionHeading heading="Popular Tour Package" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="WE OFFER" sectionColor="#1A1A1B" align="text-center"/>
                 <div className="row">
-                    <div className="col-md-10 mx-auto">
+                    <div className="col-10 mx-auto">
+                        <div className="row">
                         <OwlCarousel className="owl-theme" {...options}>
                             {
                                 pakages.map(pData =>(
-                                    <div className="item" key={pData.id}>
+                                    <div className="item col-lg-12 col-md-12 col-10 mx-auto" key={pData.id}>
                                         <div className="pkg-card">
                                             <div className="pkg-img">
                                                 <img src={pData.pakageImage} alt={pData.pakagePlace} className="img-fluid" />
@@ -88,6 +89,7 @@ const Packages = () => {
                                 ))
                             }
                         </OwlCarousel>
+                        </div>
                     </div>
                 </div>
             </div>

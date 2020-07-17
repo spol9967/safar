@@ -127,7 +127,12 @@
   width: 400px;
   outline: none;
 }
-
+@media only screen and (max-width:600px){
+  .subscribe input{
+    width: 100%;
+    margin-right:0;
+  }
+}
 .subscribe input::placeholder{
   color: #ffffff80;
   font-family: 'Raleway', sans-serif;
@@ -237,6 +242,14 @@
 .packages-section .owl-carousel .owl-nav button.owl-next{
   right: -50px;
 }
+@media only screen and (max-width:600px){
+  .packages-section .owl-carousel .owl-nav button.owl-prev{
+    left: -25px;
+  }
+  .packages-section .owl-carousel .owl-nav button.owl-next{
+    right: -25px;
+  }
+}
 .packages-section .owl-carousel .owl-nav button span{
   font-size: 30px;
   line-height: 20px;
@@ -343,6 +356,9 @@
   height: 100%;
   background: transparent;
   transition: .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .service-container:before{
   content: '';
@@ -364,7 +380,9 @@
   /* transform: translateX(50%); */
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  /* margin-top: 70px; */
+  display: inline-block;
+  width: 100%;
 }
 .content .service-btn {
   border-radius: 25px;
@@ -582,15 +600,17 @@ footer .sub-footer ul li a{
 /* Footer end */
 
 /* ------------testimonals---------- */
-
-.t-1{
+.testimonial{
+  padding: 80px 0;
+}
+.testimonial .t-1{
   border: 3px solid #7cb946;
     border-radius: 50%;
     margin-left:auto;
     margin-right: auto;
 }
 
-.test-card {
+.testimonial .test-card {
   width: 300px;
   margin: auto;
   text-align: center;
@@ -601,17 +621,17 @@ footer .sub-footer ul li a{
   cursor: pointer;
 }
 
-.owl-carousel .owl-item img{
+.testimonial .owl-carousel .owl-item img{
   width: auto !important;
 }
-.test-name{
+.testimonial .test-name{
   font-family: 'Poppins',sans-serif;
   font-size: 16px;
   padding: 10px;
   font-weight: 600;
   margin-bottom: 0;
 }
-.test-para{
+.testimonial .test-para{
   font-size: 15px;
   text-align: center;
   font-family: 'Poppins',sans-serif;
@@ -619,7 +639,7 @@ footer .sub-footer ul li a{
   color: #858585;
   padding: 0 5px;
 }
-.quotes{
+.testimonial .quotes{
   margin-left: auto;
   margin-right: auto;
 }
