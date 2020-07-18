@@ -5,6 +5,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 
+<<<<<<< HEAD
 const Testimonial = () => {
     const options = {
         items: 3,
@@ -26,6 +27,47 @@ const Testimonial = () => {
             },
             1000:{
                 items:3
+=======
+    componentDidMount() {
+        //console.log("hii");
+        db.collection('review')
+            .get()
+            .then(snapshot => {
+                const review = [];
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    review.push(data)
+                })
+                console.log(review);
+                this.setState({ review: review })
+
+            })
+            .catch(error => console.log(error))
+    }
+
+    render() {
+        const options = {
+            items: this.state.review.length,
+            nav: true,
+            loop: true,
+            rewind: true,
+            autoplay: true,
+            margin: 20,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+>>>>>>> d0540e569b2d3e8aa55ee46b13c8b3e95f864032
             }
         }
     };
