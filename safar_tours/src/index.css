@@ -173,12 +173,8 @@
 .bottom .map {
   width: 100px;
   height: 100px;
-  margin: 5px 0 0 30px;
+  margin: 25px 0 0 0;
   background-position: center;
-  /* box-shadow: 5px 10px 5px #0000007c; */
-  /* background-image: linear-gradient(180deg, rgba(4, 34, 7, 0.486) 0%,
-      rgba(7, 30, 14, 0.233) 100%),
-    url("/images/baner-map.png"); */
   background-image: url("/images/baner-map.png");
   background-repeat: no-repeat;
 }
@@ -286,7 +282,7 @@
 
 .packages-section .pkg-price {
   font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 37px;
   font-size: 14px;
 }
@@ -297,14 +293,14 @@
 
 .pkg-name {
   font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 37px;
   font-size: 18px;
 }
 
 .pkg-duration {
   font-family: 'Raleway', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 37px;
   font-size: 14px;
 }
@@ -486,15 +482,9 @@
 }
 
 .content {
-  /* position: absolute; */
-  /* top: 72%; */
-  /* transform: translateY(-50%); */
-  /* padding: 30px 50px; */
   text-align: center;
-  /* transform: translateX(50%); */
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 70px; */
   display: inline-block;
   width: 100%;
 }

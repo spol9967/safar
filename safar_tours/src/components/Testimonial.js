@@ -27,7 +27,7 @@ class Testimonial extends Component {
 
     render() {
         const options = {
-            items: 3,
+            items: this.state.review.length,
             nav: true,
             loop: true,
             rewind: true,

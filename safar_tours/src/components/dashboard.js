@@ -37,7 +37,7 @@ const dashboard = () => {
                         <div className="img-label text-light playfair">Visit nearby</div>
                         </div>
                         <div className="d-inline-block align-top pt-3">
-                            <div className="text-uppercase popin text-light">Matheran hill station</div>
+                            <div className="text-uppercase text-light">Matheran hill station</div>
                             <div className="text-uppercase text-light playfair">matheran magic</div>
                             <div className="sub-title text-light-2 raleway">Cutest little hill-station of India</div>
                             <div className="plus"></div>
@@ -45,8 +45,8 @@ const dashboard = () => {
                     </div>
                     <div className="col-6 ofiice-details">
                         <div>
-                            <div className="text-light raleway text-right pt-3">Pune</div>
-                            <div className="sub-title raleway text-light-2 text-right">Sexten Dolomites,<br></br> Elevation2,999 m (9,839 ft)</div>
+                            <div className="text-light palyfair text-right pt-3">Mumbai</div>
+                            <div className="playfair text-light-2 text-right"> R-3/507 Satnford, Panvelkar Estate,<br/><br/>Badalpur(E), Maharashtra - 421503  </div>
                             <div className="social-icon text-right raleway">
                                 <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-pinterest"></i></div>
                                 <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-twitter"></i></div>
