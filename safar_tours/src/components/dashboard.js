@@ -34,11 +34,11 @@ const dashboard = () => {
                 <div className="row">
                     <div className="col-6 key-location ">                       
                         <div className="bg d-inline-block">
-                        <div className="img-label text-light raleway">Visit nearby</div>
+                        <div className="img-label text-light playfair">Visit nearby</div>
                         </div>
                         <div className="d-inline-block align-top pt-3">
                             <div className="text-uppercase popin text-light">Matheran hill station</div>
-                            <div className="text-uppercase text-light raleway">matheran magic</div>
+                            <div className="text-uppercase text-light playfair">matheran magic</div>
                             <div className="sub-title text-light-2 raleway">Cutest little hill-station of India</div>
                             <div className="plus"></div>
                         </div>
