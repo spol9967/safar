@@ -12,9 +12,7 @@ const Footer = () => {
                                 <img src={process.env.PUBLIC_URL + '/images/ftrLogo.png'} className="img-fluid" alt="LOGO"/>
                             </div>
                             <p className="business-info">
-                                Fusce dapibus, tellus ac cursus commodo,
-                                tortor mauris. Fusce dapibus, tellus ac cursus 
-                                commodo, tortor mauris. 
+                                R-3/507 Satnford, Panvelkar Estate, <br/>Badalpur(E), Maharashtra - 421503  
                             </p>
                             <ul className="list-inline d-flex social-links">
                                 <li><Link to=""><img src={process.env.PUBLIC_URL + '/images/twitter.svg'} alt="twitter Icon"/></Link></li>
@@ -48,8 +46,17 @@ const Footer = () => {
                                 us a message
                             </p>
                             <ul className="list-inline">
-                                <li>
-                                    <a href="tel:+18001232134" className="contact-links" >+1 800 123 1234</a>
+                                <li className="d-flex justify-content-between mb-2 flex-md-column flex-lg-row">
+                                    <div>
+                                        <p className="contact-name">Suraj Thorat</p>
+                                        <a href="tel:+917028196267" className="contact-links" >+91 70281 96267</a>
+                                        <a href="tel:+919324171201" className="contact-links" >+91 93241 71201</a>
+                                    </div>
+                                    <div className="pl-1">
+                                        <p className="contact-name">Rupesh Dhobale</p>
+                                        <a href="tel:+919697982315" className="contact-links" >+91 96979 82315</a>
+                                        <a href="tel:+919503456481" className="contact-links" >+91 95034 56481</a>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="mailto:email@website.com" className="contact-links" >email@website.com</a>
