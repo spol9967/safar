@@ -11,6 +11,7 @@ import Services from './components/Services';
 import Subscribe from './components/Subscribe';
 import Testimonial from './components/Testimonial';
 import Video from './components/Video';
+import Bookcarpopup from './components/Bookcarpopup';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Video />
         <Counts />
         <Bookcar />
+        <Bookcarpopup />
         <Subscribe />
         <Packages />
         <Testimonial />
