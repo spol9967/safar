@@ -1,33 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import SectionHeading from './SectionHeading';
+import { db, auth } from '../config/fbConfig'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
+class Testimonial extends Component {
+    state = { review: [] }
 
-<<<<<<< HEAD
-const Testimonial = () => {
-    const options = {
-        items: 3,
-        nav: true,
-        loop:true,
-        rewind: true,
-        autoplay: true,
-        margin:20,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            1000:{
-                items:3
-=======
     componentDidMount() {
         //console.log("hii");
         db.collection('review')
@@ -67,38 +47,42 @@ const Testimonial = () => {
                 1000: {
                     items: 3
                 }
->>>>>>> d0540e569b2d3e8aa55ee46b13c8b3e95f864032
             }
         }
-    };
-    return (
-        <section className="testimonial">
-            <div className="container">
-                <div>
-                <SectionHeading heading="Happy Travelers" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
-                    <div className="row">
-                    <OwlCarousel
-                        className="owl-theme"
-                        {...options}>
-                        <div className="item">
-                            <div className="test-card">
-                                    <img src={process.env.PUBLIC_URL + "/images/test-1.jpg"} alt="test 1" className="t-1 img-responsive" />
-                                <div className="test-content">
-                                    <p className="test-name">Jimmy Dean</p>
-                                    <p className="test-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry of the printing and typesetting industry. </p>
-                                    <img src={process.env.PUBLIC_URL + "/images/quotes.png"} alt="" className="img-responsive quotes" />
-                                </div>
-                            </div>
+        return (
+            <section className="testimonial">
+                <div className="container">
+                    <div>
+                        <SectionHeading heading="Happy Travelers" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center" />
+                        <div className="row">
+                            {this.state.review.length > 0 ?
+                                <OwlCarousel
+                                    className="owl-theme" {...options}>
+                                    {
+                                        this.state.review && this.state.review.map(data => (
+                                            <div className="item" key={data.id}>
+                                                <div className="test-card">
+                                                    <img src={process.env.PUBLIC_URL + "/images/test-1.jpg"} alt="test 1" className="t-1 img-responsive" />
+                                                    <div className="test-content">
+                                                        <p className="test-name">{data.name}</p>
+                                                        <p className="test-para">{data.review}</p>
+                                                        <img src={process.env.PUBLIC_URL + "/images/quotes.png"} alt="" className="img-responsive quotes" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                                </OwlCarousel>
+
+                                : ""}
+
                         </div>
-                    </OwlCarousel>
+                    </div>
                 </div>
 
-                    
-                </div>
-            </div>
-            
-        </section>
-    )
+            </section>
+        )
+    }
 }
 
 export default Testimonial
