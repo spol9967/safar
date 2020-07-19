@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Modal from 'react-modal';
 
-
+const props = {};
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App {...props}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

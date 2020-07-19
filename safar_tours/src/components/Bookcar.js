@@ -1,6 +1,8 @@
 import React, { Component }  from 'react';
 import SectionHeading from './SectionHeading';
 import {db, auth} from '../config/fbConfig'
+import Modal from 'react-modal';
+
 
 class Bookcar extends Component{
     state = {cars: null}
@@ -22,8 +24,9 @@ class Bookcar extends Component{
     }
 
     render(){ 
+       
         return (
-            <section className="book-Your-Car">
+            <section className="book-Your-Car" id="bookCar">
                 <div className="container">
                     <SectionHeading heading="Book Your Car" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
                     <div className="row">
