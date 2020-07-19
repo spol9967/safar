@@ -22,7 +22,6 @@ function App() {
         <Services />
         <Video />
         <Counts />
-        <Bookcar />
         <Bookcarpopup />
         <Subscribe />
         <Packages />
