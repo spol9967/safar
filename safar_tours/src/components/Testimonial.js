@@ -62,7 +62,7 @@ class Testimonial extends Component {
                                         this.state.review && this.state.review.map(data => (
                                             <div className="item" key={data.id}>
                                                 <div className="test-card">
-                                                    <img src={process.env.PUBLIC_URL + "/images/test-1.jpg"} alt="test 1" className="t-1 img-responsive" />
+                                                    <img src={process.env.PUBLIC_URL + "/images/review/"+data.name+".jpg"} alt="Client image" className="t-1 img-responsive custom-size-img" />
                                                     <div className="test-content">
                                                         <p className="test-name">{data.name}</p>
                                                         <p className="test-para">{data.review}</p>

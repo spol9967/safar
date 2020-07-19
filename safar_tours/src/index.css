@@ -99,7 +99,7 @@
   left: -30px;
   width: 80px;
   height: 30px;
-  transform: rotate(-90deg) translate(-25px,-25px);
+  transform: rotate(-90deg) translate(-25px, -25px);
   background: #000;
   padding: 5px 10px;
   font-size: 12px;
@@ -773,6 +773,13 @@ footer .sub-footer ul li a {
   cursor: pointer;
 }
 
+.testimonial .owl-carousel .owl-item img.custom-size-img {
+  width: 100px !important;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .testimonial .owl-carousel .owl-item img {
   width: auto !important;
 }
@@ -798,6 +805,7 @@ footer .sub-footer ul li a {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* ---------popup box----------- */
 
 .modal-dialog {
@@ -930,11 +938,12 @@ html .ui-button.ui-state-disabled:active {
   font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 576px){
-  .modal-dialog{
+@media (min-width: 576px) {
+  .modal-dialog {
     margin: 3.85rem auto;
   }
 }
-.fade:not(.show){
+
+.fade:not(.show) {
   opacity: 1 !important;
 }
