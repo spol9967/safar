@@ -12,6 +12,7 @@ import Subscribe from './components/Subscribe';
 import Testimonial from './components/Testimonial';
 import Video from './components/Video';
 import Bookcarpopup from './components/Bookcarpopup';
+import Bookpkg from './components/Bookpkg';
 
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
         <Dashboard />
         <Services />
         <Video />
+        <Bookpkg />
         <Counts />
+        <Bookcar />
         <Bookcarpopup />
         <Subscribe />
         <Packages />
