@@ -930,3 +930,11 @@ html .ui-button.ui-state-disabled:active {
   font-family: 'Poppins', sans-serif;
 }
 
+@media (min-width: 576px){
+  .modal-dialog{
+    margin: 3.85rem auto;
+  }
+}
+.fade:not(.show){
+  opacity: 1 !important;
+}
