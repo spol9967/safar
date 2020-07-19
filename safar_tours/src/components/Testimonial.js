@@ -28,7 +28,7 @@ class Testimonial extends Component {
     render() {
         const options = {
             items: this.state.review.length,
-            nav: true,
+            nav: false,
             loop: true,
             rewind: true,
             autoplay: true,
@@ -66,7 +66,7 @@ class Testimonial extends Component {
                                                     <div className="test-content">
                                                         <p className="test-name">{data.name}</p>
                                                         <p className="test-para">{data.review}</p>
-                                                        <img src={process.env.PUBLIC_URL + "/images/quotes.png"} alt="" className="img-responsive quotes" />
+                                                        <img src={process.env.PUBLIC_URL + "/images/quotes.png"} alt="quotes" className="img-responsive quotes" />
                                                     </div>
                                                 </div>
                                             </div>
