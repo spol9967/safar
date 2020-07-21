@@ -32,8 +32,8 @@ class Bookcar extends Component{
                     <div className="row">
                         {
                             this.state.cars && this.state.cars.map(data => (
-                                <div className="col-10 col-sm-8 mx-auto col-md-6 col-lg-3 mb-4 mb-lg-0" key={data.id}>
-                                    <div className="car-grid-wrapper">
+                                <div className="col-10 col-sm-8 mx-auto col-md-6 col-lg-3 mb-4 d-flex" key={data.id}>
+                                    <div className="car-grid-wrapper d-flex flex-column justify-content-between">
                                         <div className="car-date-wrapper">
                                             <h6 className="text-center">
                                                 <span>{data.date}</span>
@@ -51,13 +51,13 @@ class Bookcar extends Component{
                                             </div>
                                             <div className="car-seater">
                                                 <div className="car-facility-icon">
-                                                    <img src={data.seatIcon} className="img-fluid" alt=""/>
+                                                    <img src={process.env.PUBLIC_URL + '/images/overturned-vehicle.png'} className="img-fluid" alt="seat icon"/>
                                                 </div>
                                                 <h6 className="d-inline seats">{data.seats}</h6>
                                             </div>
                                             <div className="car-facilities d-flex">
                                                 <div className="car-facility-icon align-self-center">
-                                                    <img src={data.facilityIcon} className="img-fluid" alt={data.facilityIcon}/>
+                                                    <img src={process.env.PUBLIC_URL + '/images/lines.png'} className="img-fluid" alt={data.facilityIcon}/>
                                                 </div>
                                                 <ul className="list-inline facility-lists d-inline mb-0 pl-3">
                                                     <li className="d-inline-flex">{data.facility.airBags}</li>

@@ -148,7 +148,7 @@ class Bookpkg extends Component {
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlfor="text">Phone No:</label>
+                                                <label className="control-label col-sm-3" htmlFor="text">Phone No:</label>
                                                 <div className="col-sm-9">
                                                     <input type="text" className="form-control" id="text" placeholder="987654310" name="text" required />
                                                 </div>
@@ -158,7 +158,7 @@ class Bookpkg extends Component {
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlfor="loc">Location:</label>
+                                                <label className="control-label col-sm-3" htmlFor="loc">Location:</label>
                                                 <div className="col-sm-9">
                                                     <input type="loc" className="form-control" id="loc" placeholder="Your Location" name="loc" required />
                                                 </div>
@@ -168,7 +168,7 @@ class Bookpkg extends Component {
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlfor="loc">Passenger No:</label>
+                                                <label className="control-label col-sm-3" htmlFor="loc">Passenger No:</label>
                                                 <div className="col-sm-9">
                                                     <input type="number" className="form-control" id="number" placeholder="0" name="number" required />
                                                 </div>
@@ -178,7 +178,7 @@ class Bookpkg extends Component {
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlfor="loc">Pick-Up Date:</label>
+                                                <label className="control-label col-sm-3" htmlFor="loc">Pick-Up Date:</label>
                                                 <div className="col-sm-4 pickup1">
                                                     <DatePicker className="form-control"
                                                         selected={this.state.startDate}
@@ -197,7 +197,7 @@ class Bookpkg extends Component {
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlfor="loc">Drop-Off Date:</label>
+                                                <label className="control-label col-sm-3" htmlFor="loc">Drop-Off Date:</label>
                                                 <div className="col-sm-4 pickup1">
                                                     <DatePicker className="form-control"
                                                         selected={this.state.startDate}
