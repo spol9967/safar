@@ -64,13 +64,11 @@ class Bookcarpopup extends Component {
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
                     style={customStyles}
-                    contentLabel="Example Modal"
+                    contentLabel="bookcarpopup-modal"
                 >
-
-
-                    <div className="container-fluid">
+                    <div className="container-fluid bookcarpopup-modal">
                         <div className="row">
-                            <div className="col-sm-4">
+                            <div className="col-lg-4 col-md-5">
                                 <div className="back-bg">
                                     <section>
                                         <h4>What We Provide You</h4>
@@ -81,7 +79,7 @@ class Bookcarpopup extends Component {
                                     </section>
                                 </div>
                             </div>
-                            <div className="col-sm-8 align-self-center">
+                            <div className="col-lg-8 col-md-7 align-self-center">
                                 <button type="button" className="close" onClick={this.closeModal} >&times;</button>
                                 <h4 className="book-drive">BOOK YOUR DRIVE</h4>
                                 <form className="form-horizontal" action="/action_page.php">
