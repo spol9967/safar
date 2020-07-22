@@ -25,7 +25,6 @@ function App() {
         <Bookpkg />
         <Counts />
         <Bookcar />
-        <Bookcarpopup />
         <Subscribe />
         <Packages />
         <Testimonial />

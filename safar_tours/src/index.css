@@ -612,7 +612,7 @@ section .car-grid-wrapper .car-info-wrapper .car-rate .rate p {
   color: #45454D;
 }
 
-section .car-grid-wrapper .car-info-wrapper .book-now-button a {
+section .car-grid-wrapper .car-info-wrapper .book-now-button button {
   background-color: #74B946;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -624,6 +624,7 @@ section .car-grid-wrapper .car-info-wrapper .book-now-button a {
   border-radius: 3px;
   border: 1px solid #74B946;
   transition: 0.3s all ease;
+  width: -webkit-fill-available;
 }
 
 section .car-grid-wrapper .car-info-wrapper .book-now-button a:hover {

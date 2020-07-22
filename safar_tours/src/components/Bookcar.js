@@ -1,34 +1,75 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import SectionHeading from './SectionHeading';
-import {db, auth} from '../config/fbConfig'
+import { db, auth } from '../config/fbConfig'
 import Modal from 'react-modal';
+import Popup from './Popup';
 
 
-class Bookcar extends Component{
-    state = {cars: null}
+class Bookcar extends Component {
+    state = {
+        cars: null,
+        id: 0,
+        subtitle: 0,
+        modalIsOpen: false,
+        setIsOpen: false,
+        startDate: new Date(),
+        time: '10:00'
+    }
 
-    componentDidMount(){
+    componentDidMount() {
         //console.log("hii");
         db.collection('cars')
             .get()
-            .then( snapshot =>{
-                    const cars = [];
-                    snapshot.forEach(doc =>{
-                        const data = doc.data();
-                        cars.push(data)
-                    })
+            .then(snapshot => {
+                const cars = [];
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    cars.push(data)
+                })
                 //console.log(cars);
-                this.setState({cars: cars})
+                this.setState({ cars: cars })
             })
             .catch(error => console.log(error))
     }
 
-    render(){ 
-       
+    ModelOpen = (e) => {
+        var stateID = e.target.getAttribute("data-id")
+        this.setState({ id: stateID })
+        this.setState({ setIsOpen: true })
+        this.setState({ modalIsOpen: true })
+    }
+    closeModal = () => {
+        this.setState({ setIsOpen: false })
+        this.setState({ modalIsOpen: false })
+    }
+
+    render() {
+        const customStyles = {
+            content: {
+                top: '50%',
+                left: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                marginRight: '-50%',
+                transform: 'translate(-50%, -50%)',
+                width: '80%'
+            }
+        };
+
+
         return (
             <section className="book-Your-Car" id="bookCar">
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    style={customStyles}
+                    contentLabel="bookcarpopup-modal"
+                >
+                    <Popup id={this.state.id} closeModal={this.closeModal}/>
+                </Modal>
                 <div className="container">
-                    <SectionHeading heading="Book Your Car" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center"/>
+                    <SectionHeading heading="Book Your Car" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center" />
                     <div className="row">
                         {
                             this.state.cars && this.state.cars.map(data => (
@@ -45,19 +86,19 @@ class Bookcar extends Component{
                                         <div className="car-info-wrapper">
                                             <div className="car-model-year">
                                                 <h4 className="d-flex justify-content-between">
-                                                    <span className="car-name">{data.carName}</span> 
+                                                    <span className="car-name">{data.carName}</span>
                                                     <span className="car-year">{data.carYearModel}</span>
                                                 </h4>
                                             </div>
                                             <div className="car-seater">
                                                 <div className="car-facility-icon">
-                                                    <img src={process.env.PUBLIC_URL + '/images/overturned-vehicle.png'} className="img-fluid" alt="seat icon"/>
+                                                    <img src={process.env.PUBLIC_URL + '/images/overturned-vehicle.png'} className="img-fluid" alt="seat icon" />
                                                 </div>
                                                 <h6 className="d-inline seats">{data.seats}</h6>
                                             </div>
                                             <div className="car-facilities d-flex">
                                                 <div className="car-facility-icon align-self-center">
-                                                    <img src={process.env.PUBLIC_URL + '/images/lines.png'} className="img-fluid" alt={data.facilityIcon}/>
+                                                    <img src={process.env.PUBLIC_URL + '/images/lines.png'} className="img-fluid" alt={data.facilityIcon} />
                                                 </div>
                                                 <ul className="list-inline facility-lists d-inline mb-0 pl-3">
                                                     <li className="d-inline-flex">{data.facility.airBags}</li>
@@ -69,14 +110,14 @@ class Bookcar extends Component{
                                             </div>
                                             <div className="car-rate d-flex">
                                                 <div className="car-facility-icon">
-                                                    <img src={data.kilpMeterIcon} className="img-fluid" alt=""/>
+                                                    <img src={data.kilpMeterIcon} className="img-fluid" alt="" />
                                                 </div>
                                                 <div className="rate align-self-center">
                                                     <p className="mb-0">{data.ratePerKiloMeter}</p>
                                                 </div>
                                             </div>
                                             <div className="book-now-button">
-                                                <a href="#" className="d-block text-center"><span>Book Now </span><span className="book-arrow"><img src={process.env.PUBLIC_URL + "/images/Path.png"} alt=""/></span></a>
+                                                <button className="d-block text-center" data-id={data.id} onClick={this.ModelOpen}>Book Now <span className="book-arrow"><img src={process.env.PUBLIC_URL + "/images/Path.png"} alt="" /></span></button>
                                             </div>
                                         </div>
                                     </div>
