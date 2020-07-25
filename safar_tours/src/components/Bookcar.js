@@ -12,6 +12,7 @@ import Popup from './Popup';
 class Bookcar extends Component {
     state = {
         cars: null,
+        carName: null,
         id: 0,
         subtitle: 0,
         modalIsOpen: false,
@@ -38,7 +39,9 @@ class Bookcar extends Component {
 
     ModelOpen = (e) => {
         var stateID = e.target.getAttribute("data-id")
+        var carName = e.target.getAttribute("data-carName")
         this.setState({ id: stateID })
+        this.setState({ carName: carName })
         this.setState({ setIsOpen: true })
         this.setState({ modalIsOpen: true })
     }
@@ -92,7 +95,7 @@ class Bookcar extends Component {
                     style={customStyles}
                     contentLabel="bookcarpopup-modal"
                 >
-                    <Popup id={this.state.id} closeModal={this.closeModal}/>
+                    <Popup id={this.state.id} carName={this.state.carName} closeModal={this.closeModal}/>
                 </Modal>
                 <div className="container">
                     <SectionHeading heading="Book Your Car" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="OUR SMILES" sectionColor="#1A1A1B" align="text-center" />
@@ -145,7 +148,7 @@ class Bookcar extends Component {
                                                         </div>
                                                     </div>
                                                     <div className="book-now-button">
-                                                        <button className="d-flex text-center align-items-center justify-content-center" data-id={data.id} onClick={this.ModelOpen}>
+                                                        <button className="d-flex text-center align-items-center justify-content-center" data-id={data.id} data-carName={data.carName} onClick={this.ModelOpen}>
                                                             Book Now 
                                                             <span className="book-arrow"><img src={process.env.PUBLIC_URL + "/images/Path.png"} alt=""/></span>
                                                         </button>
