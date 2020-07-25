@@ -1066,3 +1066,22 @@ html .ui-button.ui-state-disabled:active {
     margin: 3.85rem auto;
   }
 }
+
+/* ----------count up----------- */
+.numbs {
+  text-align: center;
+  margin-top: 100px;
+}
+.numbs CountUp{
+  font-size: 50px;
+}
+.numbs p{
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0px 0px 2px #1a1a1b;
+  color: #1a1a1b;
+}
+.value{
+  font-size: 50px;
+}
