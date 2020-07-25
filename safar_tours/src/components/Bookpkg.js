@@ -6,11 +6,7 @@ import TimePicker from 'react-time-picker';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-const $ = window.jQuery;
-
-// var subtitle;
-// const [modalIsOpen, setIsOpen] = React.useState(false);
-
+import $ from "jquery";
 
 class Bookpkg extends Component {
     state = {
@@ -31,8 +27,13 @@ class Bookpkg extends Component {
         this.setState({ setIsOpen: false })
         this.setState({ modalIsOpen: false })
     }
+    
     componentWillMount() {
         Modal.setAppElement('body');
+    }
+
+    componentDidMount() {
+        // jQuery
     }
 
     render() {
@@ -70,7 +71,7 @@ class Bookpkg extends Component {
                     onRequestClose={this.closeModal}
                     style={customStyles}
                     contentLabel="Example Modal">
-                    <div className="container-fluid">
+                    <div className="container-fluid BookPkgDiv">
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="slider">
