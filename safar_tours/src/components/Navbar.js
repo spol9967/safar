@@ -7,8 +7,8 @@ class Navbar extends Component {
         showbar: false
     }
     toggleHandler = () => {
-        this.state.toggleMenu = true
-
+        this.state.toggleMenu = !this.state.toggleMenu
+        this.forceUpdate();
     }
 
     componentDidMount() {
@@ -34,30 +34,34 @@ class Navbar extends Component {
         let style = {display : 'none'}
         if (this.state.showbar) {
             style = {display : 'flex'}
-          }
+        }
         return (
             <section className="glassnav" >
                 <nav className="navbar navbar-expand-sm navbar-light" style={style}>
-                    <div className="logo"><img src="/images/ftrLogo.png" width="60" height="60" class="img-fluid" alt="LOGO" /></div>
-                    <button className="navbar-toggler ml-auto" type="button" onClick={this.toggleHandler} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={this.state.toggleMenu} aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent" style={this.state.toggleMenu ? { display: 'block', transition: '0.3s height ease-in', height: 'auto' } : { display: 'none' }}>
-                        <ul className="navbar-nav mx-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link text-light" href="#">BOOK CAR</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light" href="#">HOLIDAYS</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link  text-light" href="#">SERVICES</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link  text-light" href="#">INFO</a>
-                            </li>
-                        </ul>
+                    <div className="container">
+                        <div className="logo">
+                            <img src="/images/ftrLogo.png" width="60" height="60" class="img-fluid" alt="LOGO" />
+                        </div>
+                        <button className="navbar-toggler ml-auto" type="button" onClick={this.toggleHandler} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={this.state.toggleMenu} aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent" style={this.state.toggleMenu ? { display: 'block', transition: '0.3s height ease-in', height: 'auto' } : { display: 'none' }}>
+                            <ul className="navbar-nav mx-auto">
+                                <li className="nav-item active">
+                                    <a className="nav-link text-light" href="#">BOOK CAR</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link text-light" href="#">HOLIDAYS</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link  text-light" href="#">SERVICES</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link  text-light" href="#">INFO</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </section>

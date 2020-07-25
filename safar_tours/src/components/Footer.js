@@ -46,8 +46,8 @@ const Footer = () => {
                                 us a message
                             </p>
                             <ul className="list-inline">
-                                <li className="d-flex justify-content-between mb-2 flex-md-column flex-lg-row">
-                                    <div>
+                                <li className="d-sm-flex justify-content-between mb-2 flex-md-column flex-lg-row">
+                                    <div className="mb-3 mb-sm-0">
                                         <p className="contact-name">Suraj Thorat</p>
                                         <a href="tel:+917028196267" className="contact-links" >+91 70281 96267</a>
                                         <a href="tel:+919324171201" className="contact-links" >+91 93241 71201</a>

@@ -21,10 +21,18 @@
   .text{
     color: #000 !important;
   }
+
+}
+.dashboard .dashbar-nav{
+  flex-direction: row;
+}
+.dashboard .dashbar-nav li a{
+  font-size: 16px;
+
 }
 .dashboard nav {
   background-color: transparent;
-  padding: 30px 0;
+  padding: 30px 10px;
   font-family: 'Playfair Display', serif;
 }
 
@@ -777,7 +785,11 @@ footer .sub-footer ul li a {
   margin: 0 20px;
   text-decoration: none;
 }
-
+@media only screen and (max-width:375px){
+  footer .sub-footer ul li a{
+    margin: 0 15px;
+  }
+}
 /* Footer end */
 
 /* ------------testimonals---------- */
@@ -1067,6 +1079,24 @@ html .ui-button.ui-state-disabled:active {
   }
 }
 
+/* ----------count up----------- */
+.numbs {
+  text-align: center;
+  margin-top: 100px;
+}
+.numbs CountUp{
+  font-size: 50px;
+}
+.numbs p{
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0px 0px 2px #1a1a1b;
+  color: #1a1a1b;
+}
+.value{
+  font-size: 50px;
+}
 
 
 /*------------------glass nav start--------------------------------------- */
