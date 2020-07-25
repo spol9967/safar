@@ -9,51 +9,47 @@ const Dashboard = () => {
     return (
         
         <div className="dashboard">
-            <nav className="navbar navbar-expand-sm dashboard-nav navbar-light">
-                <button className="navbar-toggler ml-auto" type="button" onClick={toggleHandler} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggleMenu} aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-        
-                <div className="collapse navbar-collapse" id="navbarSupportedContent" style={ toggleMenu ? { display:'block',transition:'0.3s height ease-in',height:'auto'} : {display:'none'}}>
-                    <ul className="navbar-nav mx-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link text" href="#">BOOK CAR</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link text" href="#">HOLIDAYS</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link  text" href="#">SERVICES</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link  text" href="#">INFO</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
             {
-                // <nav className="navbar navbar-expand-sm justify-content-center">
-                // <ul className="navbar-nav dashbar-nav">
-                //     <li className="nav-item">
-                //         <a className="nav-link text-light" href="#">BOOK CAR</a>
-                //     </li>
-                //     <li className="nav-item">
-                //         <a className="nav-link text-light" href="#">HOLIDAYS</a>
-                //     </li>
-                //     <li className="nav-item">
-                //         <a className="nav-link text-light" href="#">SERVICES</a>
-                //     </li>
-                //     <li className="nav-item">
-                //         <a className="nav-link text-light" href="#">INFO</a>
-                //     </li>
-                // </ul>
-            //  <ul className="navbar-nav search-icon position-absolute">
-            //         <li className="nav-item">
-            //             <a className="nav-link" href="#"><img src="/images/ico_search.svg" alt="" /></a>
-            //         </li>
-            //     </ul>
-            // </nav>
-         }
+                // <nav className="navbar navbar-expand-sm dashboard-nav navbar-light">
+                // <div className="container">
+                //     <button className="navbar-toggler ml-auto" type="button" onClick={toggleHandler} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggleMenu} aria-label="Toggle navigation">
+                //         <span className="navbar-toggler-icon"></span>
+                //     </button>
+            
+                //         <div className="collapse navbar-collapse" id="navbarSupportedContent" style={ toggleMenu ? { display:'block',transition:'0.3s height ease-in',height:'auto'} : {display:'none'}}>
+                //             <ul className="navbar-nav mx-auto">
+                //                 <li className="nav-item active">
+                //                     <a className="nav-link text" href="#">BOOK CAR</a>
+                //                 </li>
+                //                 <li className="nav-item">
+                //                     <a className="nav-link text" href="#">HOLIDAYS</a>
+                //                 </li>
+                //                 <li className="nav-item">
+                //                     <a className="nav-link  text" href="#">SERVICES</a>
+                //                 </li>
+                //                 <li className="nav-item">
+                //                     <a className="nav-link  text" href="#">INFO</a>
+                //                 </li>
+                //             </ul>
+                //         </div>
+                //     </div>
+                // </nav>
+            }
+            
+                <nav className="navbar navbar-expand-sm justify-content-center">
+                <ul className="navbar-nav dashbar-nav">
+                    <li className="nav-item">
+                        <a className="nav-link text-light" href="#">BOOK CAR</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-light" href="#">HOLIDAYS</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link text-light" href="#">SERVICES</a>
+                    </li>
+                    
+                </ul>
+            </nav>
             <div className="title text-light text-center position-relative">
                 <img src="/images/kite.png" alt="kite bird" className="kite-logo position-relative" />
                 <h1>safar</h1>
