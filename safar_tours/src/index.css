@@ -1110,10 +1110,20 @@ html .ui-button.ui-state-disabled:active {
   width: 100%;
   padding: 0 10px;
   backdrop-filter: blur(16px);
-  background-color: rgba(255, 255, 255, 0.89);
+  background-color: rgba(24, 24, 24, 0.842);
+ 
+  box-shadow:  0 2px 5px rgba(24, 24, 24, 0.842);
 }
 .glassnav .logo{
   margin-left: 10px;
   transform: scale(1.5);
+}
+.text-light {
+  color: #f8f9fa!important;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-collapse{
+  flex-grow: 0;
 }
 /*------------------glass nav end--------------------------------------- */
