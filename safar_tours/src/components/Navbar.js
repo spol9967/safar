@@ -49,16 +49,16 @@ class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent" style={this.state.toggleMenu ? { display: 'block', transition: '0.3s height ease-in', height: 'auto' } : { display: 'none' }}>
                             <ul className="navbar-nav mx-auto">
                                 <li className="nav-item active">
-                                    <a className="nav-link text-light" href="#">BOOK CAR</a>
+                                    <a className="nav-link text-dark" href="#">BOOK CAR</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-light" href="#">HOLIDAYS</a>
+                                    <a className="nav-link text-dark" href="#">HOLIDAYS</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link  text-light" href="#">SERVICES</a>
+                                    <a className="nav-link  text-dark" href="#">SERVICES</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link  text-light" href="#">INFO</a>
+                                    <a className="nav-link  text-dark" href="#">INFO</a>
                                 </li>
                             </ul>
                         </div>

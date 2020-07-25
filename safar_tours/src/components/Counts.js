@@ -11,6 +11,7 @@ const Counts = () => {
         <div className="row">
          <div className="col-sm-3">
          <div className="numbs">
+         <img src="./images/Layer 3.svg"/>
          <div className="value"><CountUp isCounting end={120859} duration={3.2} thousandsSeparator="," /></div>
          <p>HAPPY TRAVELLERS</p>
          </div>
@@ -18,6 +19,7 @@ const Counts = () => {
 
          <div className="col-sm-3">
          <div className="numbs">
+         <img src="./images/Layer 4.svg"/>
          <div className="value"><CountUp isCounting end={2594} duration={3.2} thousandsSeparator="," /></div>
          <p>SATISFIED TOURS</p>
          </div>
@@ -25,6 +27,7 @@ const Counts = () => {
 
          <div className="col-sm-3">
          <div className="numbs">
+         <img src="./images/Layer 5.svg"/>
          <div className="value"><CountUp isCounting end={854} duration={3.2} thousandsSeparator="," /></div>
          <p>DESTINATION</p>
          </div>
@@ -32,6 +35,7 @@ const Counts = () => {
 
          <div className="col-sm-3">
          <div className="numbs">
+         <img src="./images/Rounded Rectangle 1 copy 2.svg"/>
          <div className="value"><CountUp isCounting end={978} duration={3.2} thousandsSeparator="," /></div>
          <p>HOTELS RESORT</p>
          </div>
