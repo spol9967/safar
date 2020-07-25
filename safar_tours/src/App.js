@@ -20,6 +20,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Dashboard />
+        <Navbar />
         <Services />
         <Video />
         <Bookpkg />
