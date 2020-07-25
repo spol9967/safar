@@ -9,7 +9,19 @@
   background-size: auto;
   padding: 0 0 20px 0;
 }
-
+@media only screen and (max-width:575px){
+  .dashboard-nav{
+    background-color: #fff !important;
+  }
+}
+.text{
+  color:#fff !important;
+}
+@media only screen and (max-width:575px){
+  .text{
+    color: #000 !important;
+  }
+}
 .dashboard nav {
   background-color: transparent;
   padding: 30px 0;
@@ -86,9 +98,10 @@
   font-size: 30px;
   color: rgba(255, 255, 255, 0.479);
 }
-
-.bottom {
-  height: 150px;
+@media only screen and (min-width:992px){
+  .bottom {
+    height: 150px;
+  }
 }
 
 
@@ -521,12 +534,12 @@ section .sub-heading {
 }
 
 section .car-grid-wrapper:hover {
-  box-shadow: 0px 0px 30px rgba(107, 237, 107, 0.18);
+  box-shadow: 0px 0px 10px rgba(107, 237, 107, 0.18);
   transition: ease 0.3s box-shadow;
 }
 
 section .car-grid-wrapper {
-  box-shadow: 6px 12px 24px rgba(68, 68, 68, 0.18);
+  box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.18);
   padding: 8px;
   transition: ease 0.3s box-shadow;
 }
@@ -601,18 +614,18 @@ section .car-grid-wrapper .car-info-wrapper .car-facilities .facility-lists li {
   color: #45454D;
 }
 
-section .car-grid-wrapper .car-info-wrapper .car-rate {
+section.book-Your-Car .car-grid-wrapper .car-info-wrapper .car-rate {
   padding: 5px 0;
 }
 
-section .car-grid-wrapper .car-info-wrapper .car-rate .rate p {
+section.book-Your-Car .car-grid-wrapper .car-info-wrapper .car-rate .rate p {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #45454D;
 }
 
-section .car-grid-wrapper .car-info-wrapper .book-now-button button {
+section.book-Your-Car .car-grid-wrapper .car-info-wrapper .book-now-button button {
   background-color: #74B946;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -627,17 +640,49 @@ section .car-grid-wrapper .car-info-wrapper .book-now-button button {
   width: -webkit-fill-available;
 }
 
-section .car-grid-wrapper .car-info-wrapper .book-now-button a:hover {
+section.book-Your-Car .car-grid-wrapper .car-info-wrapper .book-now-button a:hover {
   background-color: #fff;
   color: #74b946;
   transition: 0.3s all ease;
 }
 
-section .car-grid-wrapper .car-info-wrapper .book-now-button a .book-arrow {
+section.book-Your-Car .car-grid-wrapper .car-info-wrapper .book-now-button .book-arrow {
   position: absolute;
   right: 10px;
 }
-
+section.book-Your-Car .car-facility-icon img{
+  width:22px !important;
+}
+section.book-Your-Car .car-image-wrapper img.img-fluid.w-100{
+  height: 175px;
+}
+section.book-Your-Car .owl-nav{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+  justify-content: space-between;
+}
+@media only screen and (max-width:575px){
+  section.book-Your-Car .owl-nav{padding: 0 20px; }
+}
+section.book-Your-Car .owl-nav button{
+  width: 35px;
+    height: 35px;
+    background-color: #bc4447 !important;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(128 128 128 / 54%);
+}
+section.book-Your-Car .owl-nav button span{
+  color: #fff;
+  align-self: center;
+  font-size: 21px;
+  line-height: 10px;
+  padding-bottom: 2px;
+  outline: none;
+}
 /* Book car end */
 /* Footer start */
 footer .main-footer-wrapper {
