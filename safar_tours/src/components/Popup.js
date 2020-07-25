@@ -6,12 +6,20 @@ import TimePicker from 'react-time-picker';
 export class Popup extends Component {
     state = {
         startDate: new Date(),
-        time: new Date()
+        endDate: new Date(),
+        time: new Date(),
+        time1: new Date()
     }
 
     handleChange = date => {
         this.setState({
             startDate: date
+        });
+    };
+
+    handleChange1 = date => {
+        this.setState({
+            endDate: date
         });
     };
 
@@ -34,8 +42,19 @@ export class Popup extends Component {
                     </div>
                     <div className="col-lg-8 col-md-7 align-self-center">
                         <button type="button" className="close" onClick={this.props.closeModal} >&times;</button>
-                        <h4 className="book-drive">BOOK YOUR DRIVE {this.props.id}</h4>
+                        <h4 className="book-drive">BOOK YOUR DRIVE</h4>
                         <form className="form-horizontal" action="/action_page.php">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="form-group form-row">
+                                        <label className="control-label col-sm-3" htmlFor="name">Car Name:</label>
+                                        <div className="col-sm-9">
+                                            <input type="name" disabled className="form-control" id="carName" value={this.props.carName} name="carName"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="row">
                                 <div className="col-12">
                                     <div className="form-group form-row">
@@ -89,25 +108,6 @@ export class Popup extends Component {
                                         </div>
                                         <div className="col-sm-3">
                                             <TimePicker className="border-0"
-                                                onChange={this.onChange}
-                                                value={this.state.time} clearIcon clockIcon
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="form-group form-row">
-                                        <label className="control-label col-sm-3" htmlFor="loc">Drop-Off Date:</label>
-                                        <div className="col-sm-4 pickup1">
-                                            <DatePicker className="form-control"
-                                                selected={this.state.startDate}
-                                                onChange={this.handleChange}
-                                            />
-                                        </div>
-                                        <div className="col-sm-3">
-                                            <TimePicker
                                                 onChange={this.onChange}
                                                 value={this.state.time} clearIcon clockIcon
                                             />

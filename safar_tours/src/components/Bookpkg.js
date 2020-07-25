@@ -16,18 +16,8 @@ class Bookpkg extends Component {
     state = {
         subtitle: 0,
         modalIsOpen: false,
-        setIsOpen: false,
-        startDate: new Date(),
-        time: '10:00'
+        setIsOpen: false
     }
-
-    handleChange = date => {
-        this.setState({
-            startDate: date
-        });
-    };
-
-    onChange = time => this.setState({ time })
 
     openModal = () => {
         this.setState({ setIsOpen: true })
@@ -71,16 +61,6 @@ class Bookpkg extends Component {
             dots: true
         }
 
-        const slidernav_options = {
-            startPosition: 0,
-            items:4,
-            loop: true,
-            margin:10,
-            autoplay:false,
-            nav: false,
-            dots: false
-        }
-
         return (
             <div id="Bookpkg">
                 <button type="button" className="btn btn-info btn-lg" onClick={this.openModal}>Saya Book Now</button>
@@ -117,28 +97,6 @@ class Bookpkg extends Component {
                                         </div>
                                     </OwlCarousel>
 
-                                    <OwlCarousel className="owl-theme" {...slidernav_options}>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (1).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (2).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (3).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
-                                        </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (4).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
-                                        </div>
-                                    </OwlCarousel>
                                 </div>
                             </div>
                             <div className="col-sm-6 align-self-center">
@@ -171,44 +129,6 @@ class Bookpkg extends Component {
                                                 <label className="control-label col-sm-3" htmlFor="loc">Passenger No:</label>
                                                 <div className="col-sm-9">
                                                     <input type="number" className="form-control" id="number" placeholder="0" name="number" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlFor="loc">Pick-Up Date:</label>
-                                                <div className="col-sm-4 pickup1">
-                                                    <DatePicker className="form-control"
-                                                        selected={this.state.startDate}
-                                                        onChange={this.handleChange}
-                                                    />
-                                                </div>
-                                                <div className="col-sm-3">
-                                                    <TimePicker className="border-0"
-                                                        onChange={this.onChange}
-                                                        value={this.state.time} clearIcon clockIcon
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="form-group form-row">
-                                                <label className="control-label col-sm-3" htmlFor="loc">Drop-Off Date:</label>
-                                                <div className="col-sm-4 pickup1">
-                                                    <DatePicker className="form-control"
-                                                        selected={this.state.startDate}
-                                                        onChange={this.handleChange}
-                                                    />
-                                                </div>
-                                                <div className="col-sm-3">
-                                                    <TimePicker
-                                                        onChange={this.onChange}
-                                                        value={this.state.time} clearIcon clockIcon
-                                                    />
                                                 </div>
                                             </div>
                                         </div>

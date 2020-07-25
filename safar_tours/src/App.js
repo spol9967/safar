@@ -11,7 +11,6 @@ import Services from './components/Services';
 import Subscribe from './components/Subscribe';
 import Testimonial from './components/Testimonial';
 import Video from './components/Video';
-import Bookcarpopup from './components/Bookcarpopup';
 import Bookpkg from './components/Bookpkg';
 
 
@@ -20,6 +19,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Dashboard />
+        <Navbar />
         <Services />
         <Video />
         <Bookpkg />
