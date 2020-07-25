@@ -101,7 +101,7 @@ class Bookcar extends Component {
                             <OwlCarousel {...options}>
                                 {
                                     this.state.cars && this.state.cars.map(data => (
-                                        <div className="item col-10 col-sm-8 mx-auto col-md-12 col-lg-12 mb-4 d-flex" key={data.id}>
+                                        <div className="item col-10 col-sm-8 mx-auto col-md-12 col-lg-11 mb-4 d-flex" key={data.id}>
                                             <div className="car-grid-wrapper  flex-column justify-content-between">
                                                 <div className="car-date-wrapper">
                                                     <h6 className="text-center">
