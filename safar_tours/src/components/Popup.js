@@ -4,10 +4,10 @@ import "react-datepicker/dist/react-datepicker.css";
 import TimePicker from 'react-time-picker';
 import { Formik } from 'formik';
 import { db } from '../config/fbConfig'
-
+import $ from 'jquery'
 
 export class Popup extends Component {
-    state = { time: new Date(), date: new Date(), name: "", number: "", loc: "", count: "", carName: "", bookText:"BOOK NOW" }
+    state = { time: new Date(), date: new Date(), name: "", number: "", loc: "", count: "", carName: "", bookText: "BOOK NOW" }
 
     handleChangeInputDate = e => this.setState({ date: e })
     handleChangeInputTime = e => this.setState({ time: e })
@@ -34,8 +34,14 @@ export class Popup extends Component {
                         <Formik
                             initialValues={{ time: this.state.time, name: "", number: "", loc: "", count: "", date: this.state.date, carName: this.props.carName }}
                             onSubmit={(values, { setSubmitting }) => {
-                                
+
                                 this.setState({ bookText: "Loading....." })
+
+                                //---------API calling-----------------------
+
+                                $.post("https://obscure-waters-29185.herokuapp.com/msg",values);
+                                //-------------------Database-------------------
+
                                 db.collection('booking')
                                     .add(values)
                                     .then(this.props.closeModal)
@@ -123,7 +129,7 @@ export class Popup extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-12">
-                                            <button type="submit" disabled={this.state.bookText=="Loading....."? "disabled": ""} className="btn btn-default">{this.state.bookText}</button>
+                                            <button type="submit" disabled={this.state.bookText == "Loading....." ? "disabled" : ""} className="btn btn-default">{this.state.bookText}</button>
                                         </div>
                                     </div>
                                 </form>
