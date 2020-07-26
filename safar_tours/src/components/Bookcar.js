@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { db, auth } from '../config/fbConfig'
+import { db } from '../config/fbConfig'
 import Modal from 'react-modal';
 import Popup from './Popup';
 
