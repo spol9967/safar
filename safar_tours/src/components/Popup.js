@@ -123,7 +123,7 @@ export class Popup extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="col-12">
-                                            <button type="submit" className="btn btn-default">{this.state.bookText}</button>
+                                            <button type="submit" disabled={this.state.bookText=="Loading....."? "disabled": ""} className="btn btn-default">{this.state.bookText}</button>
                                         </div>
                                     </div>
                                 </form>
