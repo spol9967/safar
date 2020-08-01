@@ -1085,14 +1085,23 @@ html .ui-button.ui-state-disabled:active {
   box-shadow: none;
 }
 
+
+
 .BookPkgDiv .grey-box {
-  background-color: #b4b4b4;
+  all: unset;
+  width: -webkit-fill-available;
+  align-self: center;
+  background-color: #8bb946;
   color: #fff;
   font-weight: 600;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
   margin: 1rem 0;
+}
+
+.BookPkgDiv .grey-box:disabled {
+  background-color: #b4b4b4;
 }
 
 .BookPkgDiv .grey-box p {
@@ -1133,7 +1142,8 @@ html .ui-button.ui-state-disabled:active {
   font-size: 20px;
 }
 
-.book-btn {
+.book-btn{
+  all: unset;
   background-color: #8bb946;
   border-color: #8bb946;
   border-radius: 30px;
@@ -1147,7 +1157,11 @@ html .ui-button.ui-state-disabled:active {
   transition: all 300ms;
 }
 
-.payment-div.text-center .book-btn:hover {
+.book-btn:disabled{
+  background-color: #b4b4b4;
+}
+
+.payment-div.text-center .book-btn:not(:disabled):hover {
   box-shadow: 0px 5px 20px 0px #8bb9467a;
   color: #fff !important;
 }

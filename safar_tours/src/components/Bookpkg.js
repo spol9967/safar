@@ -6,6 +6,7 @@ import TimePicker from 'react-time-picker';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { db } from '../config/fbConfig'
 import $ from "jquery";
 
 class Bookpkg extends Component {
@@ -13,24 +14,33 @@ class Bookpkg extends Component {
         subtitle: 0,
         modalIsOpen: false,
         setIsOpen: false,
-        startDate: new Date(),
-        endDate: new Date(),
-        time: '10:00'
+        disable: "disable",
+        formValues: {
+            fname: "",
+            lname: "",
+            address: "",
+            email: "",
+            mobile: "",
+            checkIn: new Date(),
+            checkOut: new Date(),
+            adultCount: "",
+            childCount: "",
+            carType: ""
+        },
+        formReady: false
     }
 
     handleChange = date => {
-        this.setState({
-            startDate: date
-        });
+        const formValues = {...this.state.formValues, checkIn: date}
+        this.setState({formValues}) 
+        this.checkForm();
     };
 
     handleChange1 = date => {
-        this.setState({
-            endDate: date
-        });
+        const formValues = {...this.state.formValues, checkOut: date}
+        this.setState({formValues}) 
+        this.checkForm();
     };
-
-    onChange = time => this.setState({ time })
 
     openModal = () => {
         this.setState({ setIsOpen: true })
@@ -44,19 +54,44 @@ class Bookpkg extends Component {
         this.setState({ setIsOpen: false })
         this.setState({ modalIsOpen: false })
     }
-    
+
     componentWillMount() {
         Modal.setAppElement('body');
     }
 
-    componentDidMount() {         
+    componentDidMount() {
         // var now_src = $('.BookPkgDiv').find('.owl-item.active img').attr('src');
-        
 
-        var tn_array = $(".BookPkgDiv .owl-item img").map(function() {
+
+        var tn_array = $(".BookPkgDiv .owl-item img").map(function () {
             return $(this).attr("src");
         }).get();
         console.log(tn_array);
+    }
+
+    getFormValue = e => { 
+        const formValues = {...this.state.formValues, [e.target.name] : e.target.value }
+        this.setState({formValues}) 
+        this.checkForm();
+    }
+
+    checkForm = () => {
+        this.state.formValues.fname != "" &&
+        this.state.formValues.lname != "" &&
+        this.state.formValues.address != "" &&
+        this.state.formValues.email != "" &&
+        this.state.formValues.mobile != "" &&
+        this.state.formValues.adultCount != "" &&
+        this.state.formValues.childCount != "" &&
+        this.state.formValues.carType != "" ? this.setState({ formReady: true }) : this.setState({ formReady: false })  ;  }
+
+    handleBook  = () => {
+        debugger
+        console.log("form submitted");
+        db.collection('booktrip')
+        .add(this.state.formValues)
+        .then(this.closeModal)
+        .catch(error => console.log(error))
     }
 
     render() {
@@ -74,14 +109,14 @@ class Bookpkg extends Component {
         };
 
         const slider_options = {
-            video:true,
+            video: true,
             startPosition: 0,
-            items:1,
-            loop:true,
-            margin:10,
-            autoplay:true,
-            autoplayTimeout:6000,
-            autoplayHoverPause:false,
+            items: 1,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: false,
             nav: true,
             dots: true
         }
@@ -129,46 +164,46 @@ class Bookpkg extends Component {
                                 <h4 className="book-drive">Saya BOOK YOUR DRIVE</h4>
 
                                 <ul class="nav nav-tabs">
-                                <li class="nav-item mr-3 active">
-                                    <a class="nav-link active" data-toggle="tab" href="#home">Personal Details</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#menu2">Payments</a>
-                                </li>
+                                    <li class="nav-item mr-3 active">
+                                        <a class="nav-link active" data-toggle="tab" href="#home">Personal Details</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#menu2">Payments</a>
+                                    </li>
                                 </ul>
 
-                                
+
                                 <div class="tab-content">
                                     <div class="tab-pane active container" id="home">
                                         <form className="form-horizontal" action="">
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <input type="text" className="form-control" id="text" placeholder="First Name" name="first-name" required />
+                                                        <input type="text" className="form-control" id="text" placeholder="First Name" name="fname" required onChange={this.getFormValue} />
                                                     </div>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <input type="text" className="form-control" id="text" placeholder="Last Name" name="last-name" required />
+                                                        <input type="text" className="form-control" id="text" placeholder="Last Name" name="lname" required onChange={this.getFormValue} />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-12">
                                                     <div className="form-group form-row">
-                                                        <input type="text" className="form-control" id="loc" placeholder="Address" name="address" required />
+                                                        <input type="text" className="form-control" id="loc" placeholder="Address" name="address" required onChange={this.getFormValue} />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <input type="email" className="form-control" id="text" placeholder="E-mail" name="email-id" required />
+                                                        <input type="email" className="form-control" id="text" placeholder="E-mail" name="email" required onChange={this.getFormValue} />
                                                     </div>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <input type="text" className="form-control" id="text" placeholder="Phone" name="phone-no" required />
+                                                        <input type="text" className="form-control" id="text" placeholder="Phone" name="mobile" required onChange={this.getFormValue} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,7 +215,7 @@ class Bookpkg extends Component {
                                                         </div>
                                                         <div className="col-sm-7 pickup1">
                                                             <DatePicker className="form-control"
-                                                                selected={this.state.startDate}
+                                                                selected={this.state.formValues.checkIn}
                                                                 onChange={this.handleChange}
                                                             />
                                                         </div>
@@ -199,7 +234,7 @@ class Bookpkg extends Component {
                                                         </div>
                                                         <div className="col-sm-7 pickup1">
                                                             <DatePicker className="form-control"
-                                                                selected={this.state.endDate}
+                                                                selected={this.state.formValues.checkOut}
                                                                 onChange={this.handleChange1}
                                                             />
                                                         </div>
@@ -215,7 +250,7 @@ class Bookpkg extends Component {
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <select name="adults" class="custom-select">
+                                                        <select name="adultCount" class="custom-select" onChange={this.getFormValue}>
                                                             <option selected>Adults</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
@@ -225,7 +260,7 @@ class Bookpkg extends Component {
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <select name="childern" class="custom-select">
+                                                        <select name="childCount" class="custom-select" onChange={this.getFormValue}>
                                                             <option selected>Childern</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
@@ -237,22 +272,22 @@ class Bookpkg extends Component {
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
-                                                        <select name="car-type" class="custom-select">
+                                                        <select name="carType" class="custom-select" onChange={this.getFormValue}>
                                                             <option selected>Car-Type</option>
-                                                            <option value="4 seater" className="d-flex align-items-end">4 seater <i class="fab fa-car-side"></i></option>
-                                                            <option value="6 seater" className="d-flex align-items-end">6 seater <i class="fab fa-car-side"></i></option>
-                                                            <option value="7 seater" className="d-flex align-items-end">7 seater <i class="fab fa-car-side"></i></option>
+                                                            <option value="4" className="d-flex align-items-end">4 seater <i class="fab fa-car-side"></i></option>
+                                                            <option value="6" className="d-flex align-items-end">6 seater <i class="fab fa-car-side"></i></option>
+                                                            <option value="7" className="d-flex align-items-end">7 seater <i class="fab fa-car-side"></i></option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-sm-12">
-                                                    <div className="grey-box">
+                                                    <button className="grey-box" disabled={this.state.formReady ? "" : "disabled"} data-toggle="tab" href="#menu2">
                                                         <p>
-                                                            Go ahead select your hotel and book the tour with <span>Safar tours and travels</span>   
+                                                            Go ahead select your hotel and book the tour with <span>Safar tours and travels</span>
                                                         </p>
-                                                    </div>
+                                                    </button>
                                                 </div>
                                             </div>
 
@@ -261,18 +296,18 @@ class Bookpkg extends Component {
 
                                     <div class="tab-pane container" id="menu2">
                                         <div class="payment-div text-center">
-                                            <img src="../../images/gpay-logo.jpg" class="d-block m-auto" alt=""/>
+                                            <img src="../../images/gpay-logo.jpg" class="d-block m-auto" alt="" />
                                             <label className="d-block">or</label>
                                             <div className="grey-bg">
                                                 <p>Please connect for more help :</p>
                                                 <a href="tel:9876543210" title="9876543210">9876543210</a>
                                             </div>
-                                            <a className="book-btn text-light">BOOK</a>
+                                            <button className="book-btn text-light" disabled={this.state.formReady ? "" : "disabled"} onClick={this.handleBook} >BOOK</button>
                                         </div>
                                     </div>
 
                                 </div>
-                                
+
                             </div>
 
                         </div>
