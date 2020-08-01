@@ -48,8 +48,6 @@ class Bookcarpopup extends Component {
         Modal.setAppElement('body');
     }
 
-
-
     render() {
         const customStyles = {
             content: {

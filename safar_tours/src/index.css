@@ -9,27 +9,33 @@
   background-size: auto;
   padding: 0 0 20px 0;
 }
-@media only screen and (max-width:575px){
-  .dashboard-nav{
+
+@media only screen and (max-width:575px) {
+  .dashboard-nav {
     background-color: #fff !important;
   }
 }
-.text{
-  color:#fff !important;
+
+.text {
+  color: #fff !important;
 }
-@media only screen and (max-width:575px){
-  .text{
+
+@media only screen and (max-width:575px) {
+  .text {
     color: #000 !important;
   }
 
 }
-.dashboard .dashbar-nav{
+
+.dashboard .dashbar-nav {
   flex-direction: row;
 }
-.dashboard .dashbar-nav li a{
+
+.dashboard .dashbar-nav li a {
   font-size: 16px;
 
 }
+
 .dashboard nav {
   background-color: transparent;
   padding: 30px 10px;
@@ -106,7 +112,8 @@
   font-size: 30px;
   color: rgba(255, 255, 255, 0.479);
 }
-@media only screen and (min-width:992px){
+
+@media only screen and (min-width:992px) {
   .bottom {
     height: 150px;
   }
@@ -659,13 +666,16 @@ section.book-Your-Car .car-grid-wrapper .car-info-wrapper .book-now-button .book
   position: absolute;
   right: 10px;
 }
-section.book-Your-Car .car-facility-icon img{
-  width:22px !important;
+
+section.book-Your-Car .car-facility-icon img {
+  width: 22px !important;
 }
-section.book-Your-Car .car-image-wrapper img.img-fluid.w-100{
+
+section.book-Your-Car .car-image-wrapper img.img-fluid.w-100 {
   height: 175px;
 }
-section.book-Your-Car .owl-nav{
+
+section.book-Your-Car .owl-nav {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -673,18 +683,23 @@ section.book-Your-Car .owl-nav{
   transform: translateY(-50%);
   justify-content: space-between;
 }
-@media only screen and (max-width:575px){
-  section.book-Your-Car .owl-nav{padding: 0 20px; }
+
+@media only screen and (max-width:575px) {
+  section.book-Your-Car .owl-nav {
+    padding: 0 20px;
+  }
 }
-section.book-Your-Car .owl-nav button{
+
+section.book-Your-Car .owl-nav button {
   width: 35px;
-    height: 35px;
-    background-color: #bc4447 !important;
-    border-radius: 50%;
-    outline: none;
-    box-shadow: 0px 0px 10px rgb(128 128 128 / 54%);
+  height: 35px;
+  background-color: #bc4447 !important;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0px 0px 10px rgb(128 128 128 / 54%);
 }
-section.book-Your-Car .owl-nav button span{
+
+section.book-Your-Car .owl-nav button span {
   color: #fff;
   align-self: center;
   font-size: 21px;
@@ -692,6 +707,7 @@ section.book-Your-Car .owl-nav button span{
   padding-bottom: 2px;
   outline: none;
 }
+
 /* Book car end */
 /* Footer start */
 footer .main-footer-wrapper {
@@ -786,11 +802,13 @@ footer .sub-footer ul li a {
   margin: 0 20px;
   text-decoration: none;
 }
-@media only screen and (max-width:375px){
-  footer .sub-footer ul li a{
+
+@media only screen and (max-width:375px) {
+  footer .sub-footer ul li a {
     margin: 0 15px;
   }
 }
+
 /* Footer end */
 
 /* ------------testimonals---------- */
@@ -1007,6 +1025,131 @@ html .ui-button.ui-state-disabled:active {
 .ReactModal__Overlay {
   z-index: 1;
   background-color: rgba(10, 29, 0, 0.75) !important;
+  ;
+}
+
+/* book car modal by sayali */
+.BookPkgDiv {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+.BookPkgDiv .nav-item.active .nav-link {
+  background-color: #8bb946;
+}
+
+.BookPkgDiv .nav-item .nav-link {
+  background-color: #bebebe;
+  color: #fff;
+  border-radius: 8px;
+  width: 150px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.BookPkgDiv .nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  border-bottom: none;
+}
+
+.BookPkgDiv .form-control {
+  background-color: #fff;
+  width: 100%;
+}
+
+.BookPkgDiv .form-control:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.BookPkgDiv .custom-select {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: none;
+  border-radius: 2px;
+  color: #999;
+  position: relative;
+}
+
+.BookPkgDiv .custom-select:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.BookPkgDiv .grey-box {
+  background-color: #b4b4b4;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.BookPkgDiv .grey-box p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.BookPkgDiv .grey-box span {
+  text-transform: uppercase;
+  display: block;
+}
+
+.payment-div .grey-bg {
+  background-color: #ccc;
+  color: #fff;
+  font-weight: 600;
+  padding: 2rem 0;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.payment-div .grey-bg p {
+  margin-bottom: 0;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+.payment-div .grey-bg a {
+  text-transform: uppercase;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+
+.payment-div label{
+  color: #ccc;
+  font-size: 20px;
+}
+
+.book-btn {
+  background-color: #8bb946;
+  border-color: #8bb946;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+  width: fit-content;
+  margin: 30px auto 0;
+  display: block;
+  padding: 10px 40px;
+  transition: all 300ms;
+}
+
+.payment-div.text-center .book-btn:hover {
+  box-shadow: 0px 5px 20px 0px #8bb9467a;
+  color: #fff !important;
 }
 
 /* Media Queries */
@@ -1042,12 +1185,12 @@ html .ui-button.ui-state-disabled:active {
     margin-top: 30px;
   }
 
-  .bookcarpopup-modal section{
+  .bookcarpopup-modal section {
     padding: 30px 0;
     text-align: center;
   }
 
-  .bookcarpopup-modal .back-bg h4{
+  .bookcarpopup-modal .back-bg h4 {
     padding: 0;
     margin: 10px 10px 20px;
   }
@@ -1071,7 +1214,7 @@ html .ui-button.ui-state-disabled:active {
 
   .packages-section .owl-carousel .owl-nav button.owl-next {
     right: -25px;
-  }  
+  }
 }
 
 @media (min-width: 576px) {
@@ -1085,17 +1228,20 @@ html .ui-button.ui-state-disabled:active {
   text-align: center;
   margin-top: 100px;
 }
-.numbs CountUp{
+
+.numbs CountUp {
   font-size: 30px;
 }
-.numbs p{
+
+.numbs p {
   font-size: 18px;
   margin-bottom: 30px;
   font-family: 'Poppins', sans-serif;
   text-shadow: 0px 0px 2px #1a1a1b;
   color: #1a1a1b;
 }
-.value{
+
+.value {
   font-size: 30px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -1104,7 +1250,7 @@ html .ui-button.ui-state-disabled:active {
 
 
 /*------------------glass nav start--------------------------------------- */
-.glassnav{
+.glassnav {
   position: fixed;
   top: 0;
   z-index: 2;
@@ -1112,18 +1258,22 @@ html .ui-button.ui-state-disabled:active {
   padding: 0 10px;
   backdrop-filter: blur(16px);
   background-color: rgb(255 255 255 / 84%);
- 
+
   box-shadow: 0 2px 16px rgb(24 24 24 / 20%);
 }
-.glassnav .logo{
+
+.glassnav .logo {
   margin-left: 10px;
   transform: scale(1.5);
 }
-.glassnav li a{
+
+.glassnav li a {
   color: #402e2b !important;
   font-weight: 500;
 }
-.navbar-collapse{
+
+.navbar-collapse {
   flex-grow: 0;
 }
+
 /*------------------glass nav end--------------------------------------- */
