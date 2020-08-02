@@ -27,29 +27,46 @@ class Bookpkg extends Component {
             childCount: "",
             carType: ""
         },
-        formReady: false
+        formReady: false,
+        img_arr: ["Client (1).jpg", "Client (2).jpg", "Client (3).jpg", "Client (4).jpg"],
+        index: 0
     }
 
     handleChange = date => {
-        const formValues = {...this.state.formValues, checkIn: date}
-        this.setState({formValues}) 
+        const formValues = { ...this.state.formValues, checkIn: date }
+        this.setState({ formValues })
         this.checkForm();
     };
 
     handleChange1 = date => {
-        const formValues = {...this.state.formValues, checkOut: date}
-        this.setState({formValues}) 
+        const formValues = { ...this.state.formValues, checkOut: date }
+        this.setState({ formValues })
         this.checkForm();
     };
 
     openModal = () => {
         this.setState({ setIsOpen: true })
-        this.setState({ modalIsOpen: true })        
+        this.setState({ modalIsOpen: true })
     }
 
     afterOpenModal = () => {
-        
-    }    
+        $(".slider .display img").attr("src", "/images/review/" + this.state.img_arr[0])
+        this.setState({ index: 1 })
+        setInterval(
+            () => {
+                $(".slider .display img").attr("src", "/images/review/" + this.state.img_arr[this.state.index ])
+                this.setState({ index: this.state.index  + 1 })
+                if (this.state.index > 3) this.setState({ index: 0 })
+            }, 3000
+        )
+
+    }
+
+    displayImg = (e, n) => {
+        debugger
+        this.setState({ index: e.target.getAttribute("data-key") })
+        $(".slider .display img").attr("src", "/images/review/" + this.state.img_arr[this.state.index ])
+    }
 
     closeModal = () => {
         this.setState({ setIsOpen: false })
@@ -63,29 +80,30 @@ class Bookpkg extends Component {
     componentDidMount() {
     }
 
-    getFormValue = e => { 
-        const formValues = {...this.state.formValues, [e.target.name] : e.target.value }
-        this.setState({formValues}) 
+    getFormValue = e => {
+        const formValues = { ...this.state.formValues, [e.target.name]: e.target.value }
+        this.setState({ formValues })
         this.checkForm();
     }
 
     checkForm = () => {
         this.state.formValues.fname != "" &&
-        this.state.formValues.lname != "" &&
-        this.state.formValues.address != "" &&
-        this.state.formValues.email != "" &&
-        this.state.formValues.mobile != "" &&
-        this.state.formValues.adultCount != "" &&
-        this.state.formValues.childCount != "" &&
-        this.state.formValues.carType != "" ? this.setState({ formReady: true }) : this.setState({ formReady: false })  ;  }
+            this.state.formValues.lname != "" &&
+            this.state.formValues.address != "" &&
+            this.state.formValues.email != "" &&
+            this.state.formValues.mobile != "" &&
+            this.state.formValues.adultCount != "" &&
+            this.state.formValues.childCount != "" &&
+            this.state.formValues.carType != "" ? this.setState({ formReady: true }) : this.setState({ formReady: false });
+    }
 
-    handleBook  = () => {
+    handleBook = () => {
         debugger
         console.log("form submitted");
         db.collection('booktrip')
-        .add(this.state.formValues)
-        .then(this.closeModal)
-        .catch(error => console.log(error))
+            .add(this.state.formValues)
+            .then(this.closeModal)
+            .catch(error => console.log(error))
     }
 
     render() {
@@ -102,31 +120,6 @@ class Bookpkg extends Component {
             }
         };
 
-        const slider_options = {
-            startPosition: 0,
-            items: 1,
-            loop: false,
-            margin: 10,
-            autoplay: true,
-            autoplayTimeout: 6000,
-            autoplayHoverPause: false,
-            nav: true,
-            dots: true,
-            lazyLoad : true
-        }
-
-        const onLoadedLazy = () => {        
-            // references are now sync'd and can be accessed.
-            var dot_img = document.createElement("img");  
-            
-            $(".BookPkgDiv .owl-item img").map(function () {
-                dot_img.src = $(this).attr("src"); 
-                $(".BookPkgDiv .owl-dots button span").map(function (){
-                    debugger
-                    $(this)[0].appendChild(dot_img);
-                });
-            });    
-        }
 
         return (
             <div id="Bookpkg">
@@ -141,31 +134,25 @@ class Bookpkg extends Component {
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="slider">
-                                    <OwlCarousel className="owl-theme" 
-                                        onInitialized={onLoadedLazy}
-                                        {...slider_options}> 
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (1).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
+                                    <div className="display d-flex justify-content-center">
+                                        <div className="d-inline-flex">
+                                            <img alt="Client image" className="custom-size-img" />
                                         </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (2).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
+                                    </div>
+                                    <div className="navdot d-flex justify-content-between">
+                                        <div className="d-inline-flex">
+                                            <img src="/images/review/Client (1).jpg" alt="Client image" className="custom-size-img" data-key="0" onClick={this.displayImg} />
                                         </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (3).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
+                                        <div className="d-inline-flex">
+                                            <img src="/images/review/Client (2).jpg" alt="Client image" className="custom-size-img" data-key="1" onClick={this.displayImg} />
                                         </div>
-                                        <div className="item">
-                                            <div className="test-card">
-                                                <img src="/images/review/Client (4).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
-                                            </div>
+                                        <div className="d-inline-flex">
+                                            <img src="/images/review/Client (3).jpg" alt="Client image" className="custom-size-img" data-key="2" onClick={this.displayImg} />
                                         </div>
-                                    </OwlCarousel>
-
+                                        <div className="d-inline-flex">
+                                            <img src="/images/review/Client (4).jpg" alt="Client image" className="custom-size-img" data-key="3" onClick={this.displayImg} />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-sm-6">
