@@ -44,11 +44,12 @@ class Bookpkg extends Component {
 
     openModal = () => {
         this.setState({ setIsOpen: true })
-        this.setState({ modalIsOpen: true })
+        this.setState({ modalIsOpen: true })        
     }
+
     afterOpenModal = () => {
-        // references are now sync'd and can be accessed.
-    }
+        
+    }    
 
     closeModal = () => {
         this.setState({ setIsOpen: false })
@@ -60,13 +61,6 @@ class Bookpkg extends Component {
     }
 
     componentDidMount() {
-        // var now_src = $('.BookPkgDiv').find('.owl-item.active img').attr('src');
-
-
-        var tn_array = $(".BookPkgDiv .owl-item img").map(function () {
-            return $(this).attr("src");
-        }).get();
-        console.log(tn_array);
     }
 
     getFormValue = e => { 
@@ -109,16 +103,29 @@ class Bookpkg extends Component {
         };
 
         const slider_options = {
-            video: true,
             startPosition: 0,
             items: 1,
-            loop: true,
+            loop: false,
             margin: 10,
             autoplay: true,
             autoplayTimeout: 6000,
             autoplayHoverPause: false,
             nav: true,
-            dots: true
+            dots: true,
+            lazyLoad : true
+        }
+
+        const onLoadedLazy = () => {        
+            // references are now sync'd and can be accessed.
+            var dot_img = document.createElement("img");  
+            
+            $(".BookPkgDiv .owl-item img").map(function () {
+                dot_img.src = $(this).attr("src"); 
+                $(".BookPkgDiv .owl-dots button span").map(function (){
+                    debugger
+                    $(this)[0].appendChild(dot_img);
+                });
+            });    
         }
 
         return (
@@ -134,7 +141,9 @@ class Bookpkg extends Component {
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="slider">
-                                    <OwlCarousel className="owl-theme" {...slider_options}>
+                                    <OwlCarousel className="owl-theme" 
+                                        onInitialized={onLoadedLazy}
+                                        {...slider_options}> 
                                         <div className="item">
                                             <div className="test-card">
                                                 <img src="/images/review/Client (1).jpg" alt="Client image" className="t-1 img-responsive custom-size-img" />
