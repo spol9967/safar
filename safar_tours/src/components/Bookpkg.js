@@ -21,8 +21,8 @@ class Bookpkg extends Component {
             address: "",
             email: "",
             mobile: "",
-            checkIn: new Date(),
-            checkOut: new Date(),
+            checkIn: null,
+            checkOut: null,
             adultCount: "",
             childCount: "",
             carType: ""
@@ -103,6 +103,8 @@ class Bookpkg extends Component {
             this.state.formValues.mobile != "" &&
             this.state.formValues.adultCount != "" &&
             this.state.formValues.childCount != "" &&
+            this.state.formValues.checkIn != null &&
+            this.state.formValues.checkOut != null &&
             this.state.formValues.carType != "" ? this.setState({ formReady: true }) : this.setState({ formReady: false });
     }
 
@@ -169,10 +171,9 @@ class Bookpkg extends Component {
                                         <a class="nav-link active" data-toggle="tab" href="#home">Personal Details</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#menu2">Payments</a>
+                                        <a class="nav-link" disabled={this.state.formReady ? "" : "disabled"} data-toggle="tab" href="#menu2">Payments</a>
                                     </li>
                                 </ul>
-
 
                                 <div class="tab-content">
                                     <div class="tab-pane active container" id="home">
@@ -215,7 +216,7 @@ class Bookpkg extends Component {
                                                             <label className="mb-0">Check In</label>
                                                         </div>
                                                         <div className="col-xl-7 col-lg-12 col-md-12 pickup1">
-                                                            <DatePicker className="form-control"
+                                                            <DatePicker className="form-control" placeholderText="MM/DD/YYYY"
                                                                 selected={this.state.formValues.checkIn}
                                                                 onChange={this.handleChange}
                                                             />
@@ -228,7 +229,7 @@ class Bookpkg extends Component {
                                                             <label className="mb-0">Check Out</label>
                                                         </div>
                                                         <div className="col-xl-7 col-lg-12 col-md-12 pickup1">
-                                                            <DatePicker className="form-control"
+                                                            <DatePicker className="form-control" placeholderText="MM/DD/YYYY"
                                                                 selected={this.state.formValues.checkOut}
                                                                 onChange={this.handleChange1}
                                                             />
@@ -240,7 +241,7 @@ class Bookpkg extends Component {
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
                                                         <select name="adultCount" class="custom-select" onChange={this.getFormValue}>
-                                                            <option selected>Adults</option>
+                                                            <option selected value="">Adults</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -250,7 +251,7 @@ class Bookpkg extends Component {
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
                                                         <select name="childCount" class="custom-select" onChange={this.getFormValue}>
-                                                            <option selected>Childern</option>
+                                                            <option selected value="">Childern</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
@@ -262,7 +263,7 @@ class Bookpkg extends Component {
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row">
                                                         <select name="carType" class="custom-select" onChange={this.getFormValue}>
-                                                            <option selected>Car-Type</option>
+                                                            <option selected value="">Car-Type</option>
                                                             <option value="4" className="d-flex align-items-end">4 seater <i class="fab fa-car-side"></i></option>
                                                             <option value="6" className="d-flex align-items-end">6 seater <i class="fab fa-car-side"></i></option>
                                                             <option value="7" className="d-flex align-items-end">7 seater <i class="fab fa-car-side"></i></option>

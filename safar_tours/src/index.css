@@ -1143,6 +1143,17 @@ html .ui-button.ui-state-disabled:active {
   display: block;
 }
 
+.BookPkgDiv .nav-link[disabled]:parent {
+  cursor: not-allowed;
+  padding-top: 5rem;
+  background: red;
+  padding: 5rem;
+}
+
+.BookPkgDiv .nav-link[disabled] {
+  pointer-events: none;
+}
+
 .payment-div .grey-bg {
   background-color: #ccc;
   color: #fff;
@@ -1208,7 +1219,7 @@ html .ui-button.ui-state-disabled:active {
     width: 100%;
   }
 
-  .ReactModal__Content--after-open{
+  .ReactModal__Content--after-open {
     width: 90% !important;
   }
 }
