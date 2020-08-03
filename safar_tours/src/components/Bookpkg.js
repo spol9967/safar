@@ -58,12 +58,21 @@ class Bookpkg extends Component {
                 this.setState({ index: this.state.index  + 1 })
                 if (this.state.index > 3) this.setState({ index: 0 })
             }, 3000
-        )
-
+        )      
+        
     }
 
-    displayImg = (e, n) => {
-        debugger
+    greyBox = () => {   
+        if ($("#menu2").hasClass("active") && !$(".nav-link[href='#menu2']").parent(".nav-item").hasClass("active")){
+            $(".nav-link[href='#menu2']").parent(".nav-item").addClass("active");
+            $(".nav-link[href='#home']").parent(".nav-item").removeClass("active");
+        }
+        else{
+            $(".nav-link[href='#menu2']").parent(".nav-item").removeClass("active");
+        }
+    }    
+
+    displayImg = (e, n) => {      
         this.setState({ index: e.target.getAttribute("data-key") })
         $(".slider .display img").attr("src", "/images/review/" + this.state.img_arr[this.state.index ])
     }
@@ -97,8 +106,7 @@ class Bookpkg extends Component {
             this.state.formValues.carType != "" ? this.setState({ formReady: true }) : this.setState({ formReady: false });
     }
 
-    handleBook = () => {
-        debugger
+    handleBook = () => {      
         console.log("form submitted");
         db.collection('booktrip')
             .add(this.state.formValues)
@@ -129,7 +137,7 @@ class Bookpkg extends Component {
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
                     style={customStyles}
-                    contentLabel="Example Modal">
+                    contentLabel="BookPkgDiv">
                     <div className="container-fluid BookPkgDiv">
                         <div className="row">
                             <div className="col-sm-6">
@@ -142,14 +150,11 @@ class Bookpkg extends Component {
                                     <div className="navdot d-flex justify-content-between">
                                         <div className="d-inline-flex">
                                             <img src="/images/review/Client (1).jpg" alt="Client image" className="custom-size-img" data-key="0" onClick={this.displayImg} />
-                                        </div>
-                                        <div className="d-inline-flex">
+                                        
                                             <img src="/images/review/Client (2).jpg" alt="Client image" className="custom-size-img" data-key="1" onClick={this.displayImg} />
-                                        </div>
-                                        <div className="d-inline-flex">
+                                        
                                             <img src="/images/review/Client (3).jpg" alt="Client image" className="custom-size-img" data-key="2" onClick={this.displayImg} />
-                                        </div>
-                                        <div className="d-inline-flex">
+                                        
                                             <img src="/images/review/Client (4).jpg" alt="Client image" className="custom-size-img" data-key="3" onClick={this.displayImg} />
                                         </div>
                                     </div>
@@ -158,9 +163,9 @@ class Bookpkg extends Component {
                             <div className="col-sm-6">
                                 <button type="button" className="close" onClick={this.closeModal} >&times;</button>
                                 <h4 className="book-drive">Saya BOOK YOUR DRIVE</h4>
-
+ 
                                 <ul class="nav nav-tabs">
-                                    <li class="nav-item mr-3 active">
+                                    <li class="nav-item mr-lg-3 active">
                                         <a class="nav-link active" data-toggle="tab" href="#home">Personal Details</a>
                                     </li>
                                     <li class="nav-item">
@@ -206,40 +211,28 @@ class Bookpkg extends Component {
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row d-flex align-items-center">
-                                                        <div className="col-sm-5">
+                                                        <div className="col-xl-5 col-lg-12 col-md-12">
                                                             <label className="mb-0">Check In</label>
                                                         </div>
-                                                        <div className="col-sm-7 pickup1">
+                                                        <div className="col-xl-7 col-lg-12 col-md-12 pickup1">
                                                             <DatePicker className="form-control"
                                                                 selected={this.state.formValues.checkIn}
                                                                 onChange={this.handleChange}
                                                             />
                                                         </div>
-                                                        {/* <div className="col-sm-3">
-                                                            <TimePicker className="border-0"
-                                                                onChange={this.onChange}
-                                                                value={this.state.time} clearIcon clockIcon
-                                                            />
-                                                        </div> */}
                                                     </div>
                                                 </div>
                                                 <div className="col-sm-6">
                                                     <div className="form-group form-row d-flex align-items-center">
-                                                        <div className="col-sm-5">
+                                                        <div className="col-xl-5 col-lg-12 col-md-12">
                                                             <label className="mb-0">Check Out</label>
                                                         </div>
-                                                        <div className="col-sm-7 pickup1">
+                                                        <div className="col-xl-7 col-lg-12 col-md-12 pickup1">
                                                             <DatePicker className="form-control"
                                                                 selected={this.state.formValues.checkOut}
                                                                 onChange={this.handleChange1}
                                                             />
                                                         </div>
-                                                        {/* <div className="col-sm-3">
-                                                            <TimePicker
-                                                                onChange={this.onChange}
-                                                                value={this.state.time} clearIcon clockIcon
-                                                            />
-                                                        </div> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,7 +272,7 @@ class Bookpkg extends Component {
                                             </div>
                                             <div className="row">
                                                 <div className="col-sm-12">
-                                                    <button className="grey-box" disabled={this.state.formReady ? "" : "disabled"} data-toggle="tab" href="#menu2">
+                                                    <button className="grey-box" disabled={this.state.formReady ? "" : "disabled"} onClick={this.greyBox} data-toggle="tab" href="#menu2">
                                                         <p>
                                                             Go ahead select your hotel and book the tour with <span>Safar tours and travels</span>
                                                         </p>

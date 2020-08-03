@@ -1085,13 +1085,33 @@ html .ui-button.ui-state-disabled:active {
   box-shadow: none;
 }
 
-
-.BookPkgDiv .navdot .custom-size-img{
-  height: 150px;
-  width: 150px;
+.BookPkgDiv .navdot {
+  overflow-y: auto;
 }
 
-.BookPkgDiv .display{
+.BookPkgDiv .navdot::-webkit-scrollbar {
+  background-color: #fff;
+  width: 5px;
+}
+
+.BookPkgDiv .navdot::-webkit-scrollbar-track {
+  background-color: #fff
+}
+
+.BookPkgDiv .navdot::-webkit-scrollbar-thumb {
+  background-color: #8bb946;
+  border-radius: 16px;
+  border: 6px solid #fff;
+}
+
+.BookPkgDiv .navdot .custom-size-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.BookPkgDiv .display {
   margin: 50px 0;
 }
 
@@ -1146,12 +1166,12 @@ html .ui-button.ui-state-disabled:active {
   font-size: 20px;
 }
 
-.payment-div label{
+.payment-div label {
   color: #ccc;
   font-size: 20px;
 }
 
-.book-btn{
+.book-btn {
   all: unset;
   background-color: #8bb946;
   border-color: #8bb946;
@@ -1166,7 +1186,7 @@ html .ui-button.ui-state-disabled:active {
   transition: all 300ms;
 }
 
-.book-btn:disabled{
+.book-btn:disabled {
   background-color: #b4b4b4;
 }
 
@@ -1187,10 +1207,20 @@ html .ui-button.ui-state-disabled:active {
   .bookcarpopup-modal .pickup1 input {
     width: 100%;
   }
+
+  .ReactModal__Content--after-open{
+    width: 90% !important;
+  }
 }
 
 @media only screen and (max-width:767px) and (min-width:320px) {
   div[aria-label="bookcarpopup-modal"] {
+    width: 90% !important;
+    padding: 20px 10px !important;
+    height: 500px;
+  }
+
+  div[aria-label="BookPkgDiv"] {
     width: 90% !important;
     padding: 20px 10px !important;
     height: 500px;
@@ -1216,6 +1246,22 @@ html .ui-button.ui-state-disabled:active {
   .bookcarpopup-modal .back-bg h4 {
     padding: 0;
     margin: 10px 10px 20px;
+  }
+
+  .BookPkgDiv .row {
+    flex-direction: column-reverse;
+  }
+
+  .BookPkgDiv .nav-tabs {
+    margin-bottom: 0;
+  }
+
+  .BookPkgDiv .nav-item {
+    margin-bottom: 20px;
+  }
+
+  .BookPkgDiv .pickup1 {
+    padding: 0;
   }
 }
 
