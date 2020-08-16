@@ -1208,7 +1208,7 @@ html .ui-button.ui-state-disabled:active {
 
 /* Media Queries */
 
-@media only screen and (max-width:1024px) and (min-width:768px) {
+@media only screen and (min-width:768px) and (max-width:1024px) {
   div[aria-label="bookcarpopup-modal"] {
     width: 90% !important;
     padding: 20px 10px !important;
@@ -1221,6 +1221,26 @@ html .ui-button.ui-state-disabled:active {
 
   .ReactModal__Content--after-open {
     width: 90% !important;
+  }
+
+  /* ----------count up----------- */
+  .numbs {
+    margin-top: 0px;
+  }
+
+  .numbs CountUp {
+    font-size: 20px;
+  }
+
+  .numbs p {
+    font-size: 15px;
+  }
+
+  .value {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
   }
 }
 

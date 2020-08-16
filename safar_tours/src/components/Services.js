@@ -6,7 +6,7 @@ const Services = () => {
         <div className="container">
             <div className="services-container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-lg-3 col-md-12">
                         {
                             //<p className="discover-text">DISCOVER</p>
                             //<h4 className="services-heading">Our Hot Services</h4>
@@ -14,7 +14,7 @@ const Services = () => {
                         <SectionHeading heading="Our Hot Services" shape="/images/Shape1.png" subheadingColor="#8D8D8D" subheading="DISCOVER" sectionColor="#1A1A1B" align="text-center text-md-left"/>
                         <p className="services-para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-lg-9 col-md-12">
                         <div className="row">
                             <div className="col-lg-4 col-md-6 second-row">
                                 <div className="services-box">
