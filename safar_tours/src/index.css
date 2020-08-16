@@ -1115,7 +1115,6 @@ html .ui-button.ui-state-disabled:active {
   margin: 50px 0;
 }
 
-
 .BookPkgDiv .grey-box {
   all: unset;
   width: -webkit-fill-available;
@@ -1152,6 +1151,15 @@ html .ui-button.ui-state-disabled:active {
 
 .BookPkgDiv .nav-link[disabled] {
   pointer-events: none;
+}
+
+.BookPkgDiv .custom-datepicker .react-datepicker-popper {
+  right: 0px;
+  left: unset !important;
+}
+
+.BookPkgDiv .custom-datepicker .react-datepicker__triangle {
+  left: 80% !important;
 }
 
 .payment-div .grey-bg {
@@ -1209,6 +1217,27 @@ html .ui-button.ui-state-disabled:active {
 /* Media Queries */
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
+  .dashboard .kite-logo {
+    height: 80px;
+    width: 80px;
+  }
+
+  .dashboard .title h1 {
+    font-size: 70px;
+  }
+
+  .dashboard .title h4 {
+    font-size: 40px;
+  }
+
+  .dashboard .title h6 {
+    font-size: 20px;
+  }
+
+  .dashboard .social-icon svg {
+    width: 20px;
+  }
+
   div[aria-label="bookcarpopup-modal"] {
     width: 90% !important;
     padding: 20px 10px !important;
@@ -1224,27 +1253,76 @@ html .ui-button.ui-state-disabled:active {
   }
 
   /* ----------count up----------- */
-  .numbs {
+  .counter-section .numbs {
     margin-top: 0px;
   }
 
-  .numbs CountUp {
+  .counter-section .numbs CountUp {
     font-size: 20px;
   }
 
-  .numbs p {
+  .counter-section .numbs p {
     font-size: 15px;
   }
 
-  .value {
+  .counter-section .value {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     margin-top: 20px;
   }
+
+  /* subcribe section */
+  .subscribe input {
+    margin: 40px 20px 30px 0;
+  }
+
+  .trip-heading {
+    font-size: 38px;
+    padding: 50px 0 30px 0;
+  }
+
+  .trip-content .trip-button {
+    margin: 10px 0 50px;
+  }
 }
 
 @media only screen and (max-width:767px) and (min-width:320px) {
+  .dashboard {
+    padding: 0 0 40px 0;
+  }
+
+  .dashboard .kite-logo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .dashboard .title h1 {
+    font-size: 50px;
+  }
+
+  .dashboard .title h4 {
+    font-size: 30px;
+  }
+
+  .dashboard .title h6 {
+    font-size: 20px;
+  }
+
+  .dashboard .bottom .key-location {
+    text-align: center;
+  }
+
+  .dashboard .bottom .ofiice-details {
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .dashboard .social-icon svg {
+    width: 20px;
+  }
+
   div[aria-label="bookcarpopup-modal"] {
     width: 90% !important;
     padding: 20px 10px !important;
@@ -1279,7 +1357,7 @@ html .ui-button.ui-state-disabled:active {
     margin: 10px 10px 20px;
   }
 
-  .BookPkgDiv .row {
+  .BookPkgDiv>.row {
     flex-direction: column-reverse;
   }
 
@@ -1293,6 +1371,53 @@ html .ui-button.ui-state-disabled:active {
 
   .BookPkgDiv .pickup1 {
     padding: 0;
+  }
+
+  .subscribe .trip-heading {
+    padding: 50px 0 30px 0;
+    font-size: 28px;
+  }
+
+  .subscribe input {
+    margin: 30px 20px 30px 0;
+  }
+
+  .subscribe button {
+    margin: 0 20px 30px 0;
+  }
+
+  .trip-heading {
+    font-size: 28px;
+    padding: 50px 0 30px 0;
+  }
+
+  .trip-content .trip-button {
+    margin: 10px 0 40px;
+  }
+
+  .counter-section .value {
+    font-size: 20px;
+  }
+
+  .counter-section .numbs {
+    margin-top: 30px;
+  }
+
+  .counter-section .numbs p {
+    font-size: 15px;
+  }
+
+  .section-heading-wrapper .sub-heading {
+    font-size: 1.1rem;
+  }
+
+  .services-container {
+    margin: 30px 0 20px 0;
+  }
+
+  .section-heading-wrapper .section-heading {
+    font-size: 1.3rem;
+    margin-bottom: 0;
   }
 }
 
@@ -1358,7 +1483,6 @@ html .ui-button.ui-state-disabled:active {
   padding: 0 10px;
   backdrop-filter: blur(16px);
   background-color: rgb(255 255 255 / 84%);
-
   box-shadow: 0 2px 16px rgb(24 24 24 / 20%);
 }
 

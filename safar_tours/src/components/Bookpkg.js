@@ -228,7 +228,7 @@ class Bookpkg extends Component {
                                                         <div className="col-xl-5 col-lg-12 col-md-12">
                                                             <label className="mb-0">Check Out</label>
                                                         </div>
-                                                        <div className="col-xl-7 col-lg-12 col-md-12 pickup1">
+                                                        <div className="col-xl-7 col-lg-12 col-md-12 pickup1 custom-datepicker">
                                                             <DatePicker className="form-control" placeholderText="MM/DD/YYYY"
                                                                 selected={this.state.formValues.checkOut}
                                                                 onChange={this.handleChange1}

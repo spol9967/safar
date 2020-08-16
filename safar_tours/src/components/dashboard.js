@@ -58,7 +58,7 @@ const Dashboard = () => {
             </div>
             <div className="bottom container mt-5">
                 <div className="row">
-                    <div className="col-6 key-location ">                       
+                    <div className="col-sm-6 key-location ">                       
                         <div className="bg d-inline-block">
                         <div className="img-label text-light playfair">Visit nearby</div>
                         </div>
@@ -69,11 +69,11 @@ const Dashboard = () => {
                             <div className="plus"></div>
                         </div>
                     </div>
-                    <div className="col-6 ofiice-details">
+                    <div className="col-sm-6 ofiice-details">
                         <div>
-                            <div className="text-light palyfair text-right pt-3">Mumbai</div>
-                            <div className="playfair text-light-2 text-right"> R-3/507 Satnford, Panvelkar Estate,<br/><br/>Badalpur(E), Maharashtra - 421503  </div>
-                            <div className="social-icon text-right raleway">
+                            <div className="text-light palyfair text-sm-right pt-3">Mumbai</div>
+                            <div className="playfair text-light-2 text-sm-right"> R-3/507 Satnford, Panvelkar Estate,<br/><br/>Badalpur(E), Maharashtra - 421503  </div>
+                            <div className="social-icon text-sm-right raleway">
                                 <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-pinterest"></i></div>
                                 <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-twitter"></i></div>
                                 <div className="text-light d-inline rounded-circle border border-light"><i className="fab fa-facebook-f"></i></div>

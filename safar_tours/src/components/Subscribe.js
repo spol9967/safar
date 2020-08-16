@@ -13,7 +13,7 @@ const Subscribe = () => {
                         </div>
                     </div>
                     
-                    <button className="">SUBSCRIBE</button>
+                    <button className="trip-button">SUBSCRIBE</button>
                 </div>
             </div> 
         </div>
